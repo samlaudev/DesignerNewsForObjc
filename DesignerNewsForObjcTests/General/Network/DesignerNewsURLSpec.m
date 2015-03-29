@@ -12,45 +12,53 @@
 SPEC_BEGIN(DesignerNewsURLSpec)
 
 describe(@"DesignerNewsURL", ^{
+    
     context(@"when login", ^{
         it(@"should return the login url string", ^{
-            [[[DesignerNewsURL loginURLString] should] equal:@"https://api-news.layervault.com/oauth/token"];
+            NSString *expect = [NSString stringWithFormat:@"%@/oauth/token", baseURL];
+            [[[DesignerNewsURL loginURLString] should] equal:expect];
         });
     });
     
     context(@"when get stories", ^{
         it(@"should return the stories url string", ^{
-            [[[DesignerNewsURL stroiesURLString] should] equal:@"https://api-news.layervault.com/api/v1/stories"];
+            NSString *expect = [NSString stringWithFormat:@"%@/api/v1/stories", baseURL];
+            [[[DesignerNewsURL stroiesURLString] should] equal:expect];
         });
     });
     
     context(@"when get storie by id", ^{
         it(@"should return story url string by id", ^{
-            [[[DesignerNewsURL storyIdURLStringWithId:1] should] equal:@"https://api-news.layervault.com/api/v1/stories/1"];
+            NSString *expect = [NSString stringWithFormat:@"%@/api/v1/stories/1", baseURL];
+            [[[DesignerNewsURL storyIdURLStringWithId:1] should] equal:expect];
         });
     });
     
     context(@"when upvote story by id", ^{
         it(@"should return story upvote url string", ^{
-            [[[DesignerNewsURL storyUpvoteWithId:1] should] equal:@"https://api-news.layervault.com/api/v1/stories/1/upvote"];
+            NSString *expect = [NSString stringWithFormat:@"%@/api/v1/stories/1/upvote", baseURL];
+            [[[DesignerNewsURL storyUpvoteWithId:1] should] equal:expect];
         });
     });
     
     context(@"when reply story by id", ^{
         it(@"should return story reply url string", ^{
-            [[[DesignerNewsURL storyReplyWithId:1] should] equal:@"https://api-news.layervault.com/api/v1/stories/1/reply"];
+            NSString *expect = [NSString stringWithFormat:@"%@/api/v1/stories/1/reply", baseURL];
+            [[[DesignerNewsURL storyReplyWithId:1] should] equal:expect];
         });
     });
     
     context(@"when upvote comment by id", ^{
         it(@"should return comment upvote url string", ^{
-            [[[DesignerNewsURL commentUpvoteWithId:1] should] equal:@"https://api-news.layervault.com/api/v1/comments/1/upvote"];
+            NSString *expect = [NSString stringWithFormat:@"%@/api/v1/comments/1/upvote", baseURL];
+            [[[DesignerNewsURL commentUpvoteWithId:1] should] equal:expect];
         });
     });
     
     context(@"when reply comment by id", ^{
         it(@"should return comment reply url string ", ^{
-            [[[DesignerNewsURL commentReplyWithId:1] should] equal:@"https://api-news.layervault.com/api/v1/comments/1/reply"];
+            NSString *expect = [NSString stringWithFormat:@"%@/api/v1/comments/1/reply", baseURL];
+            [[[DesignerNewsURL commentReplyWithId:1] should] equal:expect];
         });
     });
 });

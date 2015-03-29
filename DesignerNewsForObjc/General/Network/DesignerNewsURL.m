@@ -8,6 +8,15 @@
 
 #import "DesignerNewsURL.h"
 
+#ifndef TEST
+NSString* const baseURL = @"https://api-news.layervault.com";
+#else
+NSString* const baseURL = @"http://localhost:12306";
+#endif
+
+NSString* const clientID = @"750ab22aac78be1c6d4bbe584f0e3477064f646720f327c5464bc127100a1a6d";
+NSString* const clientSecret = @"53e3822c49287190768e009a8f8e55d09041c5bf26d0ef982693f215c72d87da";
+
 @implementation DesignerNewsURL
 
 + (NSString*)loginURLString
