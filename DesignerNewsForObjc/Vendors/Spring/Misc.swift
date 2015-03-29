@@ -124,103 +124,109 @@ public func UIColorFromRGB(rgbValue: UInt) -> UIColor {
     )
 }
 
-var dateFormatter : NSDateFormatter?
 
-public func stringFromDate(date: NSDate, format: String) -> String {
 
-    if dateFormatter == nil {
-        dateFormatter = NSDateFormatter()
-    }
-
-    dateFormatter!.dateFormat = format
-    return dateFormatter!.stringFromDate(date)
-}
-
-public func dateFromString(date: String, format: String) -> NSDate {
-
-    if dateFormatter == nil {
-        dateFormatter = NSDateFormatter()
-    }
-
-    dateFormatter!.dateFormat = format
-    return dateFormatter!.dateFromString(date)!
-}
-
-public func randomStringWithLength (len : Int) -> NSString {
+@objc public class Misc {
     
-    let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    
-    var randomString : NSMutableString = NSMutableString(capacity: len)
-    
-    for (var i=0; i < len; i++){
-        var length = UInt32 (letters.length)
-        var rand = arc4random_uniform(length)
-        randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
+    public class func stringFromDate(date: NSDate, format: String) -> String {
+        var dateFormatter : NSDateFormatter?
+        
+        if dateFormatter == nil {
+            dateFormatter = NSDateFormatter()
+        }
+        
+        dateFormatter!.dateFormat = format
+        return dateFormatter!.stringFromDate(date)
     }
     
-    return randomString
-}
-
-public func timeAgoSinceDate(date:NSDate, numericDates:Bool) -> String {
-    let calendar = NSCalendar.currentCalendar()
-    let unitFlags = NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitWeekOfYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitSecond
-    let now = NSDate()
-    let earliest = now.earlierDate(date)
-    let latest = now.laterDate(date)
-    let components:NSDateComponents = calendar.components(unitFlags, fromDate: earliest, toDate: latest, options: nil)
-    
-    if (components.year >= 2) {
-        return "\(components.year)y"
-    } else if (components.year >= 1){
-        if (numericDates){
-            return "1y"
-        } else {
-            return "1y"
+    public class func dateFromString(date: String, format: String) -> NSDate {
+        var dateFormatter : NSDateFormatter?
+        
+        if dateFormatter == nil {
+            dateFormatter = NSDateFormatter()
         }
-    } else if (components.month >= 2) {
-        return "\(components.month)"
-    } else if (components.month >= 1){
-        if (numericDates){
-            return "1M"
-        } else {
-            return "1M"
-        }
-    } else if (components.weekOfYear >= 2) {
-        return "\(components.weekOfYear)w"
-    } else if (components.weekOfYear >= 1){
-        if (numericDates){
-            return "1w"
-        } else {
-            return "1w"
-        }
-    } else if (components.day >= 2) {
-        return "\(components.day)d"
-    } else if (components.day >= 1){
-        if (numericDates){
-            return "1d"
-        } else {
-            return "1d"
-        }
-    } else if (components.hour >= 2) {
-        return "\(components.hour)h"
-    } else if (components.hour >= 1){
-        if (numericDates){
-            return "1h"
-        } else {
-            return "1h"
-        }
-    } else if (components.minute >= 2) {
-        return "\(components.minute)m"
-    } else if (components.minute >= 1){
-        if (numericDates){
-            return "1m"
-        } else {
-            return "1m"
-        }
-    } else if (components.second >= 3) {
-        return "\(components.second)s"
-    } else {
-        return "now"
+        
+        dateFormatter!.dateFormat = format
+        return dateFormatter!.dateFromString(date)!
     }
     
+    public class func randomStringWithLength (len : Int) -> NSString {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        
+        var randomString : NSMutableString = NSMutableString(capacity: len)
+        
+        for (var i=0; i < len; i++){
+            var length = UInt32 (letters.length)
+            var rand = arc4random_uniform(length)
+            randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
+        }
+        
+        return randomString
+    }
+    
+    public class func timeAgoSinceDate(date:NSDate, numericDates:Bool) -> String {
+        let calendar = NSCalendar.currentCalendar()
+        let unitFlags = NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitWeekOfYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitSecond
+        let now = NSDate()
+        let earliest = now.earlierDate(date)
+        let latest = now.laterDate(date)
+        let components:NSDateComponents = calendar.components(unitFlags, fromDate: earliest, toDate: latest, options: nil)
+        
+        if (components.year >= 2) {
+            return "\(components.year)y"
+        } else if (components.year >= 1){
+            if (numericDates){
+                return "1y"
+            } else {
+                return "1y"
+            }
+        } else if (components.month >= 2) {
+            return "\(components.month)"
+        } else if (components.month >= 1){
+            if (numericDates){
+                return "1M"
+            } else {
+                return "1M"
+            }
+        } else if (components.weekOfYear >= 2) {
+            return "\(components.weekOfYear)w"
+        } else if (components.weekOfYear >= 1){
+            if (numericDates){
+                return "1w"
+            } else {
+                return "1w"
+            }
+        } else if (components.day >= 2) {
+            return "\(components.day)d"
+        } else if (components.day >= 1){
+            if (numericDates){
+                return "1d"
+            } else {
+                return "1d"
+            }
+        } else if (components.hour >= 2) {
+            return "\(components.hour)h"
+        } else if (components.hour >= 1){
+            if (numericDates){
+                return "1h"
+            } else {
+                return "1h"
+            }
+        } else if (components.minute >= 2) {
+            return "\(components.minute)m"
+        } else if (components.minute >= 1){
+            if (numericDates){
+                return "1m"
+            } else {
+                return "1m"
+            }
+        } else if (components.second >= 3) {
+            return "\(components.second)s"
+        } else {
+            return "now"
+        }
+        
+    }
 }
+

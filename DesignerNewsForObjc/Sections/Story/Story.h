@@ -7,8 +7,17 @@
 //
 
 #import <Mantle.h>
+#import <UIKit/UIKit.h>
 
 @interface Story : MTLModel <MTLJSONSerializing>
 
+@property (strong, nonatomic) UIImage* badge;
+@property (strong, nonatomic) NSString* title;
+@property (strong, nonatomic) NSString* time;
+@property (strong, nonatomic) NSString* userAvatar;
+@property (strong, nonatomic) NSString* author;
+@property (assign, nonatomic) NSInteger upvoteCount;
+@property (assign, nonatomic) NSInteger commentCount;
+@property (strong, nonatomic) NSString *comment;
 
 @end
