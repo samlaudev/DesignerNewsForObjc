@@ -27,7 +27,14 @@ describe(@"StoryViewModel", ^{
         it(@"should not be nil", ^{
             [[viewModel shouldNot] beNil];
         });
+       
+        it(@"should have data source's items count greater than 0", ^{
+            [[theValue(viewModel.dataSource.items.count) shouldNotEventually] beGreaterThan:theValue(0)];
+        });
         
+        it(@"should have stories's count greater than 0", ^{
+            [[theValue(viewModel.storiesArray.count) shouldNotEventually] beGreaterThan:theValue(0)];
+        });
     });
 });
 

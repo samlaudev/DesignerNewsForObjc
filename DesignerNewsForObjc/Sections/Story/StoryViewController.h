@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StoryViewModel.h"
 
 @interface StoryViewController : UITableViewController
 
+@property (strong, nonatomic, readonly) StoryViewModel* viewModel;
 
 @end

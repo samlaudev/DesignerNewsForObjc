@@ -12,7 +12,7 @@
 @interface MenuViewController ()
 
 // UI properties
-@property (weak, nonatomic) IBOutlet DesignableView *dialogView;
+@property (weak, nonatomic) IBOutlet DesignableView* dialogView;
 
 @end
 
@@ -30,8 +30,27 @@
     // Dismiss animate
     self.dialogView.animation = @"fall";
     [self.dialogView animate];
-    
+
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)topStoriesButtonDidTouch:(id)sender
+{
+    // Close view controller
+    [self closeButtonDidTouch:sender];
+    [self.delegate menuViewControllerDidTouchTopStories:self];
+}
+
+- (IBAction)recentButtonDidTouch:(id)sender
+{
+}
+
+- (IBAction)learnButtonDidTouch:(id)sender
+{
+}
+
+- (IBAction)logoutButtonDidTouch:(id)sender
+{
 }
 
 @end

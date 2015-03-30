@@ -7,10 +7,10 @@
 //
 
 #import "StoryViewController.h"
-#import "StoryViewModel.h"
 #import "StoryTableViewCell.h"
+#import "MenuViewController.h"
 
-@interface StoryViewController ()
+@interface StoryViewController () <MenuViewControllerDelegate>
 
 @property (strong, nonatomic) StoryViewModel* viewModel;
 
@@ -44,10 +44,25 @@
         }];
 }
 
+#pragma mark - Prepare for segue
+- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"MenuSegue"]) {
+        MenuViewController* destViewController = (MenuViewController*)segue.destinationViewController;
+        destViewController.delegate = self;
+    }
+}
+
 #pragma mark - Respond to action
 - (IBAction)menuButtonDidTouch:(id)sender
 {
     [self performSegueWithIdentifier:@"MenuSegue" sender:self];
+}
+
+#pragma mark - MenuViewController delegate
+- (void)menuViewControllerDidTouchTopStories:(MenuViewController*)controller
+{
+    [self.viewModel loadStoriesForSection:@"" page:1];
 }
 
 @end

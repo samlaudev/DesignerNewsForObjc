@@ -26,8 +26,14 @@
 		1A5807FF1AC8B43B006F64D0 /* StoryViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5807FE1AC8B43B006F64D0 /* StoryViewModelSpec.m */; };
 		1A6B8E311AC8E6B20021CDE4 /* StoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E301AC8E6B20021CDE4 /* StoryTableViewCell.m */; };
 		1A6B8E351AC8FF030021CDE4 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E341AC8FF030021CDE4 /* MenuViewController.m */; };
+		1A6B8E371AC924EB0021CDE4 /* StoryViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E361AC924EB0021CDE4 /* StoryViewControllerSpec.m */; };
+		1A6B8E3F1AC93AB80021CDE4 /* UIBarButtonItem+Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E3A1AC93AB80021CDE4 /* UIBarButtonItem+Specs.m */; };
+		1A6B8E401AC93AB80021CDE4 /* UIButton+Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E3C1AC93AB80021CDE4 /* UIButton+Specs.m */; };
+		1A6B8E411AC93AB80021CDE4 /* UIView+Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E3E1AC93AB80021CDE4 /* UIView+Specs.m */; };
+		1A6B8E431AC93B4C0021CDE4 /* MenuViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E421AC93B4C0021CDE4 /* MenuViewControllerSpec.m */; };
 		1A9D3A821AC6E4E800296A0C /* StoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D3A811AC6E4E800296A0C /* StoryViewModel.m */; };
 		1A9D3A851AC6E96B00296A0C /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D3A841AC6E96B00296A0C /* Story.m */; };
+		1A9FEAB81AC9500D006EA4D4 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9FEAB71AC9500D006EA4D4 /* UIViewController+Storyboard.m */; };
 		1AD915781AC3156100B6F6A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD915771AC3156100B6F6A2 /* AppDelegate.m */; };
 		1AEF79B61AC31BBE002DF6D0 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF79981AC31BBE002DF6D0 /* AsyncButton.swift */; };
 		1AEF79B71AC31BBE002DF6D0 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF79991AC31BBE002DF6D0 /* AsyncImageView.swift */; };
@@ -102,10 +108,20 @@
 		1A6B8E301AC8E6B20021CDE4 /* StoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTableViewCell.m; sourceTree = "<group>"; };
 		1A6B8E331AC8FF030021CDE4 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		1A6B8E341AC8FF030021CDE4 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		1A6B8E361AC924EB0021CDE4 /* StoryViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewControllerSpec.m; sourceTree = "<group>"; };
+		1A6B8E391AC93AB80021CDE4 /* UIBarButtonItem+Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Specs.h"; sourceTree = "<group>"; };
+		1A6B8E3A1AC93AB80021CDE4 /* UIBarButtonItem+Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Specs.m"; sourceTree = "<group>"; };
+		1A6B8E3B1AC93AB80021CDE4 /* UIButton+Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Specs.h"; sourceTree = "<group>"; };
+		1A6B8E3C1AC93AB80021CDE4 /* UIButton+Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Specs.m"; sourceTree = "<group>"; };
+		1A6B8E3D1AC93AB80021CDE4 /* UIView+Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Specs.h"; sourceTree = "<group>"; };
+		1A6B8E3E1AC93AB80021CDE4 /* UIView+Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Specs.m"; sourceTree = "<group>"; };
+		1A6B8E421AC93B4C0021CDE4 /* MenuViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewControllerSpec.m; sourceTree = "<group>"; };
 		1A9D3A801AC6E4E800296A0C /* StoryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewModel.h; sourceTree = "<group>"; };
 		1A9D3A811AC6E4E800296A0C /* StoryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewModel.m; sourceTree = "<group>"; };
 		1A9D3A831AC6E96B00296A0C /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
 		1A9D3A841AC6E96B00296A0C /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
+		1A9FEAB61AC9500D006EA4D4 /* UIViewController+Storyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Storyboard.h"; path = "../../../DesignerNewsForObjcTests/General/Categories/UIViewController+Storyboard.h"; sourceTree = "<group>"; };
+		1A9FEAB71AC9500D006EA4D4 /* UIViewController+Storyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Storyboard.m"; path = "../../../DesignerNewsForObjcTests/General/Categories/UIViewController+Storyboard.m"; sourceTree = "<group>"; };
 		1AD915761AC3156100B6F6A2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1AD915771AC3156100B6F6A2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1AEF79981AC31BBE002DF6D0 /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
@@ -212,6 +228,12 @@
 		1A3ED5121AC6B6AD00F052AE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				1A6B8E391AC93AB80021CDE4 /* UIBarButtonItem+Specs.h */,
+				1A6B8E3A1AC93AB80021CDE4 /* UIBarButtonItem+Specs.m */,
+				1A6B8E3B1AC93AB80021CDE4 /* UIButton+Specs.h */,
+				1A6B8E3C1AC93AB80021CDE4 /* UIButton+Specs.m */,
+				1A6B8E3D1AC93AB80021CDE4 /* UIView+Specs.h */,
+				1A6B8E3E1AC93AB80021CDE4 /* UIView+Specs.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -324,6 +346,7 @@
 		1A5807DB1AC711DE006F64D0 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				1A6B8E381AC933370021CDE4 /* Menu */,
 				1A5807DC1AC711DE006F64D0 /* Comment */,
 				1A5807DD1AC711DE006F64D0 /* Login */,
 				1A5807DE1AC711DE006F64D0 /* Story */,
@@ -351,6 +374,7 @@
 				1A5807E21AC7120F006F64D0 /* StoryClientSpec.m */,
 				1A5807ED1AC824CB006F64D0 /* StorySpec.m */,
 				1A5807FE1AC8B43B006F64D0 /* StoryViewModelSpec.m */,
+				1A6B8E361AC924EB0021CDE4 /* StoryViewControllerSpec.m */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -406,6 +430,14 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		1A6B8E381AC933370021CDE4 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B8E421AC93B4C0021CDE4 /* MenuViewControllerSpec.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		1AD915751AC3156100B6F6A2 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +471,8 @@
 		1AD9157B1AC3167300B6F6A2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				1A9FEAB61AC9500D006EA4D4 /* UIViewController+Storyboard.h */,
+				1A9FEAB71AC9500D006EA4D4 /* UIViewController+Storyboard.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -772,10 +806,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A5807E31AC7120F006F64D0 /* StoryClientSpec.m in Sources */,
+				1A6B8E3F1AC93AB80021CDE4 /* UIBarButtonItem+Specs.m in Sources */,
 				1A5807D71AC6F99D006F64D0 /* DesignerNewsURLSpec.m in Sources */,
+				1A6B8E411AC93AB80021CDE4 /* UIView+Specs.m in Sources */,
 				1A5807EE1AC824CB006F64D0 /* StorySpec.m in Sources */,
+				1A9FEAB81AC9500D006EA4D4 /* UIViewController+Storyboard.m in Sources */,
 				1A3ED5171AC6B97300F052AE /* ArrayDataSourceSpec.m in Sources */,
+				1A6B8E431AC93B4C0021CDE4 /* MenuViewControllerSpec.m in Sources */,
 				1A5807F21AC826D3006F64D0 /* TestHelper.m in Sources */,
+				1A6B8E401AC93AB80021CDE4 /* UIButton+Specs.m in Sources */,
+				1A6B8E371AC924EB0021CDE4 /* StoryViewControllerSpec.m in Sources */,
 				1A5807FF1AC8B43B006F64D0 /* StoryViewModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,8 @@
 - (instancetype)initWithCellIdentifier:(NSString*)cellIdentifier configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock;
 
 @property (strong, nonatomic, readonly) ArrayDataSource* dataSource;
-@property (strong, nonatomic, readonly) NSArray *storiesArray;
+@property (strong, nonatomic, readonly) NSArray* storiesArray;
+
+- (void)loadStoriesForSection:(NSString*)section page:(NSInteger)page;
 
 @end
