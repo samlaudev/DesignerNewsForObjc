@@ -21,10 +21,9 @@
 - (StoryViewModel*)viewModel
 {
     if (!_viewModel) {
-        ArrayDataSource* dataSouce = [[ArrayDataSource alloc] initWithItems:@[ @"1" ] cellIdentifier:@"StoryCell" configureCellBlock:^(id cell, id item){
+        _viewModel = [[StoryViewModel alloc] initWithCellIdentifier:@"StoryCell" configureCellBlock:^(id cell, id item) {
 
         }];
-        _viewModel = [[StoryViewModel alloc] initWithArrayDataSource:dataSouce];
     }
 
     return _viewModel;
@@ -36,6 +35,12 @@
     [super viewDidLoad];
     // setup table view data source
     self.tableView.dataSource = self.viewModel.dataSource;
+    // observe view model's stories property, when it update, table view should reload data
+    @weakify(self)
+    [RACObserve(self.viewModel, storiesArray) subscribeNext:^(id x) {
+        @strongify(self)
+        [self.tableView reloadData];
+    }];
 }
 
 @end

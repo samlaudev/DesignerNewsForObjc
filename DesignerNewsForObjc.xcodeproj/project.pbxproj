@@ -23,6 +23,7 @@
 		1A5807EB1AC7A708006F64D0 /* stories_conf.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A5807E91AC7A708006F64D0 /* stories_conf.json */; };
 		1A5807EE1AC824CB006F64D0 /* StorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5807ED1AC824CB006F64D0 /* StorySpec.m */; };
 		1A5807F21AC826D3006F64D0 /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5807F11AC826D3006F64D0 /* TestHelper.m */; };
+		1A5807FF1AC8B43B006F64D0 /* StoryViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5807FE1AC8B43B006F64D0 /* StoryViewModelSpec.m */; };
 		1A9D3A821AC6E4E800296A0C /* StoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D3A811AC6E4E800296A0C /* StoryViewModel.m */; };
 		1A9D3A851AC6E96B00296A0C /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D3A841AC6E96B00296A0C /* Story.m */; };
 		1AD915781AC3156100B6F6A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD915771AC3156100B6F6A2 /* AppDelegate.m */; };
@@ -94,6 +95,7 @@
 		1A5807F01AC826D3006F64D0 /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
 		1A5807F11AC826D3006F64D0 /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
 		1A5807FD1AC83CEF006F64D0 /* DesignerNewsForObjc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesignerNewsForObjc-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A5807FE1AC8B43B006F64D0 /* StoryViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewModelSpec.m; sourceTree = "<group>"; };
 		1A9D3A801AC6E4E800296A0C /* StoryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewModel.h; sourceTree = "<group>"; };
 		1A9D3A811AC6E4E800296A0C /* StoryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewModel.m; sourceTree = "<group>"; };
 		1A9D3A831AC6E96B00296A0C /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 			children = (
 				1A5807E21AC7120F006F64D0 /* StoryClientSpec.m */,
 				1A5807ED1AC824CB006F64D0 /* StorySpec.m */,
+				1A5807FE1AC8B43B006F64D0 /* StoryViewModelSpec.m */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				1A5807EE1AC824CB006F64D0 /* StorySpec.m in Sources */,
 				1A3ED5171AC6B97300F052AE /* ArrayDataSourceSpec.m in Sources */,
 				1A5807F21AC826D3006F64D0 /* TestHelper.m in Sources */,
+				1A5807FF1AC8B43B006F64D0 /* StoryViewModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

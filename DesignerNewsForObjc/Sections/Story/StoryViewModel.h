@@ -8,11 +8,16 @@
 
 #import "RVMViewModel.h"
 #import "ArrayDataSource.h"
+#import "Story.h"
+#import <ReactiveCocoa.h>
+#import "StoryClient.h"
+#import <Mantle.h>
 
 @interface StoryViewModel : RVMViewModel
 
-- (instancetype)initWithArrayDataSource:(ArrayDataSource*)dataSource;
+- (instancetype)initWithCellIdentifier:(NSString*)cellIdentifier configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock;
 
-@property (strong, nonatomic, readonly) ArrayDataSource *dataSource;
+@property (strong, nonatomic, readonly) ArrayDataSource* dataSource;
+@property (strong, nonatomic, readonly) NSArray *storiesArray;
 
 @end

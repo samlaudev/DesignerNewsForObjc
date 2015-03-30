@@ -3,6 +3,9 @@
 //
 
 #import "ArrayDataSource.h"
+#import <ReactiveCocoa.h>
+#import "StoryClient.h"
+#import "Story.h"
 
 @interface ArrayDataSource ()
 
@@ -26,6 +29,7 @@
     self = [super init];
     if (self) {
         self.items = anItems;
+
         self.cellIdentifier = aCellIdentifier;
         self.configureCellBlock = [aConfigureCellBlock copy];
     }

@@ -8,15 +8,27 @@
 
 #import "StoryViewModel.h"
 
+@interface StoryViewModel ()
+
+@property (strong, nonatomic) NSArray* storiesArray;
+
+@end
+
 @implementation StoryViewModel
 
-- (instancetype)initWithArrayDataSource:(ArrayDataSource*)dataSource
+- (instancetype)initWithCellIdentifier:(NSString*)cellIdentifier configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock;
 {
     self = [super init];
-    if (!self) return nil;
+    if (!self)
+        return nil;
+    _dataSource = [[ArrayDataSource alloc] initWithItems:@[] cellIdentifier:cellIdentifier configureCellBlock:configureCellBlock];
+    // Data binding
+    RAC(self.dataSource, items) = [[StoryClient storiesForSection:@"" page:1] map:^id(NSDictionary* JSONData) {
+            return [MTLJSONAdapter modelsOfClass:Story.class fromJSONArray:JSONData[@"stories"] error:nil];
+    }];
+    RAC(self, storiesArray) = RACObserve(self.dataSource, items);
     
-    _dataSource = dataSource;
-    
+
     return self;
 }
 
