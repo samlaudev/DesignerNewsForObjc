@@ -8,6 +8,7 @@
 
 #import "StoryViewController.h"
 #import "StoryViewModel.h"
+#import "StoryTableViewCell.h"
 
 @interface StoryViewController ()
 
@@ -21,8 +22,8 @@
 - (StoryViewModel*)viewModel
 {
     if (!_viewModel) {
-        _viewModel = [[StoryViewModel alloc] initWithCellIdentifier:@"StoryCell" configureCellBlock:^(id cell, id item) {
-
+        _viewModel = [[StoryViewModel alloc] initWithCellIdentifier:@"StoryCell" configureCellBlock:^(StoryTableViewCell* cell, Story* item){
+            [cell configureCellForStory:item];
         }];
     }
 
@@ -37,10 +38,10 @@
     self.tableView.dataSource = self.viewModel.dataSource;
     // observe view model's stories property, when it update, table view should reload data
     @weakify(self)
-    [RACObserve(self.viewModel, storiesArray) subscribeNext:^(id x) {
+        [RACObserve(self.viewModel, storiesArray) subscribeNext : ^(id x) {
         @strongify(self)
         [self.tableView reloadData];
-    }];
+        }];
 }
 
 @end

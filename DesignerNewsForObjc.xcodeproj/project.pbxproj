@@ -24,6 +24,7 @@
 		1A5807EE1AC824CB006F64D0 /* StorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5807ED1AC824CB006F64D0 /* StorySpec.m */; };
 		1A5807F21AC826D3006F64D0 /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5807F11AC826D3006F64D0 /* TestHelper.m */; };
 		1A5807FF1AC8B43B006F64D0 /* StoryViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5807FE1AC8B43B006F64D0 /* StoryViewModelSpec.m */; };
+		1A6B8E311AC8E6B20021CDE4 /* StoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E301AC8E6B20021CDE4 /* StoryTableViewCell.m */; };
 		1A9D3A821AC6E4E800296A0C /* StoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D3A811AC6E4E800296A0C /* StoryViewModel.m */; };
 		1A9D3A851AC6E96B00296A0C /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D3A841AC6E96B00296A0C /* Story.m */; };
 		1AD915781AC3156100B6F6A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD915771AC3156100B6F6A2 /* AppDelegate.m */; };
@@ -96,6 +97,8 @@
 		1A5807F11AC826D3006F64D0 /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
 		1A5807FD1AC83CEF006F64D0 /* DesignerNewsForObjc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesignerNewsForObjc-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A5807FE1AC8B43B006F64D0 /* StoryViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewModelSpec.m; sourceTree = "<group>"; };
+		1A6B8E2F1AC8E6B20021CDE4 /* StoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryTableViewCell.h; sourceTree = "<group>"; };
+		1A6B8E301AC8E6B20021CDE4 /* StoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTableViewCell.m; sourceTree = "<group>"; };
 		1A9D3A801AC6E4E800296A0C /* StoryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewModel.h; sourceTree = "<group>"; };
 		1A9D3A811AC6E4E800296A0C /* StoryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewModel.m; sourceTree = "<group>"; };
 		1A9D3A831AC6E96B00296A0C /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				1A9D3A841AC6E96B00296A0C /* Story.m */,
 				1A5807D81AC70BC9006F64D0 /* StoryClient.h */,
 				1A5807D91AC70BC9006F64D0 /* StoryClient.m */,
+				1A6B8E2F1AC8E6B20021CDE4 /* StoryTableViewCell.h */,
+				1A6B8E301AC8E6B20021CDE4 /* StoryTableViewCell.m */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -728,6 +733,7 @@
 				1AEF79BA1AC31BBE002DF6D0 /* DesignableButton.swift in Sources */,
 				1AEF79BE1AC31BBE002DF6D0 /* DesignableTextField.swift in Sources */,
 				1AEF79B61AC31BBE002DF6D0 /* AsyncButton.swift in Sources */,
+				1A6B8E311AC8E6B20021CDE4 /* StoryTableViewCell.m in Sources */,
 				1AEF79C31AC31BBE002DF6D0 /* KeyboardLayoutConstraint.swift in Sources */,
 				1AEF79CA1AC31BBE002DF6D0 /* SpringButton.swift in Sources */,
 				1AEF79B71AC31BBE002DF6D0 /* AsyncImageView.swift in Sources */,

@@ -28,9 +28,6 @@ describe(@"StoryViewModel", ^{
             [[viewModel shouldNot] beNil];
         });
         
-        it(@"should have data source property", ^{
-            [[viewModel.dataSource shouldNot] beNil];
-        });
     });
 });
 

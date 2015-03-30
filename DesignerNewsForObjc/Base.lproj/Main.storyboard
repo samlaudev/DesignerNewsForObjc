@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCell" rowHeight="100" id="DOm-5M-TOW">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCell" rowHeight="100" id="DOm-5M-TOW" customClass="StoryTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DOm-5M-TOW" id="D6f-6B-9QP">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -63,7 +63,7 @@
                                             <color key="textColor" red="0.58823529409999997" green="0.65098039220000004" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xxh-Pl-FuU">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xxh-Pl-FuU" customClass="AsyncImageView" customModule="DesignerNewsForObjc" customModuleProvider="target">
                                             <rect key="frame" x="38" y="37" width="10" height="10"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="10" id="Ml9-vU-5g8"/>
@@ -123,6 +123,15 @@
                                         <constraint firstItem="dhO-ba-Ksj" firstAttribute="top" secondItem="5OJ-ah-BCc" secondAttribute="bottom" id="seN-0E-Q96"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorLabel" destination="dhO-ba-Ksj" id="xJF-2o-Se4"/>
+                                    <outlet property="badgeImageView" destination="qIJ-On-OhI" id="qSY-6U-Bhh"/>
+                                    <outlet property="commentButton" destination="9R1-6N-3iQ" id="l7T-Za-Wsc"/>
+                                    <outlet property="timeLabel" destination="LGV-0h-LV3" id="NuZ-ST-gOq"/>
+                                    <outlet property="titleLabel" destination="5OJ-ah-BCc" id="9vQ-sl-ZD2"/>
+                                    <outlet property="upvoteButton" destination="aZE-dv-39z" id="x5z-j4-mRu"/>
+                                    <outlet property="userAvatarImageView" destination="Xxh-Pl-FuU" id="Z6Y-Bi-62U"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
