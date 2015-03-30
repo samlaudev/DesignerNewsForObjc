@@ -22,7 +22,7 @@
 - (StoryViewModel*)viewModel
 {
     if (!_viewModel) {
-        _viewModel = [[StoryViewModel alloc] initWithCellIdentifier:@"StoryCell" configureCellBlock:^(StoryTableViewCell* cell, Story* item){
+        _viewModel = [[StoryViewModel alloc] initWithCellIdentifier:@"StoryCell" configureCellBlock:^(StoryTableViewCell* cell, Story* item) {
             [cell configureCellForStory:item];
         }];
     }
@@ -42,6 +42,12 @@
         @strongify(self)
         [self.tableView reloadData];
         }];
+}
+
+#pragma mark - Respond to action
+- (IBAction)menuButtonDidTouch:(id)sender
+{
+    [self performSegueWithIdentifier:@"MenuSegue" sender:self];
 }
 
 @end
