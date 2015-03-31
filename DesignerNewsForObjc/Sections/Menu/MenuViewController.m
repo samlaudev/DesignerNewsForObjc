@@ -50,6 +50,7 @@
 
 - (IBAction)learnButtonDidTouch:(id)sender
 {
+    [self performSegueWithIdentifier:@"LearnSegue" sender:self];
 }
 
 - (IBAction)logoutButtonDidTouch:(id)sender

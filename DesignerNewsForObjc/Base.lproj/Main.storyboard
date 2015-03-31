@@ -129,11 +129,62 @@
                         <outlet property="logoutButton" destination="rRr-ws-ZYB" id="NyF-G3-sun"/>
                         <outlet property="recentButton" destination="U03-k1-nFZ" id="4Gw-KF-2ne"/>
                         <outlet property="topStoriesButton" destination="d9c-i6-lOa" id="VRZ-Mh-hnY"/>
+                        <segue destination="DLx-vW-Cge" kind="presentation" identifier="LearnSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="RIv-Wr-gij"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abs-hd-dee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="654" y="1052"/>
+        </scene>
+        <!--Learn View Controller-->
+        <scene sceneID="dWz-dP-pbh">
+            <objects>
+                <viewController storyboardIdentifier="LearnViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DLx-vW-Cge" customClass="LearnViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IvF-Yu-XSB"/>
+                        <viewControllerLayoutGuide type="bottom" id="uPr-EV-VIk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="non-Zn-Ic5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0WG-bP-RPr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QUs-r9-i82">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bij-Ms-WaE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonDidTouch:" destination="DLx-vW-Cge" eventType="touchUpInside" id="eya-aE-L5l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0WG-bP-RPr" firstAttribute="top" secondItem="non-Zn-Ic5" secondAttribute="top" id="1Ck-31-OED"/>
+                            <constraint firstItem="uPr-EV-VIk" firstAttribute="top" secondItem="0WG-bP-RPr" secondAttribute="bottom" id="4X4-9w-hbU"/>
+                            <constraint firstAttribute="trailing" secondItem="Bij-Ms-WaE" secondAttribute="trailing" id="N1g-Ml-cpb"/>
+                            <constraint firstAttribute="trailing" secondItem="0WG-bP-RPr" secondAttribute="trailing" id="QDI-1O-mgU"/>
+                            <constraint firstItem="0WG-bP-RPr" firstAttribute="leading" secondItem="non-Zn-Ic5" secondAttribute="leading" id="c7x-Xp-xPp"/>
+                            <constraint firstItem="uPr-EV-VIk" firstAttribute="top" secondItem="Bij-Ms-WaE" secondAttribute="bottom" id="eVf-Mu-Ipx"/>
+                            <constraint firstItem="Bij-Ms-WaE" firstAttribute="leading" secondItem="non-Zn-Ic5" secondAttribute="leading" id="ihu-Jb-Arn"/>
+                            <constraint firstItem="Bij-Ms-WaE" firstAttribute="top" secondItem="non-Zn-Ic5" secondAttribute="top" id="lLX-VT-r6Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="Bij-Ms-WaE" id="bH1-8b-0SY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Dz-iZ-jyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="1759"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0zK-hx-H9T">

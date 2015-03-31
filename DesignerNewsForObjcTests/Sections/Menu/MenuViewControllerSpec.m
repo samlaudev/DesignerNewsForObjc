@@ -75,6 +75,14 @@ describe(@"MenuViewController", ^{
                 [controller.recentButton specsSimulateTap];
             });
         });
+        
+        context(@"when click learn button", ^{
+            it(@"should perform segue to learn view controller", ^{
+                [[controller should] receive:@selector(performSegueWithIdentifier:sender:) withArguments:@"LearnSegue", controller];
+                
+                [controller.learnButton specsSimulateTap];
+            });
+        });
     });
 });
 
