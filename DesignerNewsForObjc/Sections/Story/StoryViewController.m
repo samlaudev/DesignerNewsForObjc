@@ -75,16 +75,22 @@
 #pragma mark - MenuViewController delegate
 - (void)menuViewControllerDidTouchTopStories:(MenuViewController*)controller
 {
-    [self.viewModel loadStoriesWithType:StoryTypeTop updateUIBlock:^(NSString *title) {
-        self.navigationItem.title = title;
-        [self.tableView reloadData];
-    }];
+    [self fetchStoriesForSection:@"" title:@"Top Stories"];
 }
 
 - (void)menuViewControllerDidTouchRecentStories:(MenuViewController*)controller
 {
-    [self.viewModel loadStoriesWithType:StoryTypeRecent updateUIBlock:^(NSString *title) {
-        self.navigationItem.title = title;
+    [self fetchStoriesForSection:@"recent" title:@"Recent Stories"];
+}
+
+- (void)fetchStoriesForSection:(NSString*)section title:(NSString*)title
+{
+    // show indicator
+    self.viewModel.active = YES;
+    // change navigation item title name
+    self.navigationItem.title = title;
+    // fecth data and reload table view
+    [[self.viewModel loadStoriesForSection:section page:1] subscribeNext:^(id x) {
         [self.tableView reloadData];
     }];
 }

@@ -13,13 +13,6 @@
 #import "StoryClient.h"
 #import <Mantle.h>
 
-typedef void (^UpdateUIBlock)(NSString* title);
-
-typedef enum : NSUInteger {
-                   StoryTypeTop,
-                   StoryTypeRecent,
-               } StoryType;
-
 @interface StoryViewModel : RVMViewModel
 
 - (instancetype)initWithCellIdentifier:(NSString*)cellIdentifier configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock;
@@ -28,6 +21,5 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic, readonly) NSArray* storiesArray;
 
 - (RACSignal*)loadStoriesForSection:(NSString*)section page:(NSInteger)page;
-- (void)loadStoriesWithType:(StoryType)storyType updateUIBlock:(UpdateUIBlock)updateUIBlock;
 
 @end
