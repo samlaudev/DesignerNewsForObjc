@@ -21,4 +21,20 @@
     // dismiss view controller
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)learnButtonDidTouch:(id)sender {
+    [self openWebSiteWithURL:@"http://designcode.io/"];
+}
+
+- (IBAction)twitterButtonDidTouch:(id)sender {
+    [self openWebSiteWithURL:@"http://twitter.com/mengto"];
+}
+
+#pragma mark - Helper methods
+- (void)openWebSiteWithURL:(NSString *)urlString
+{
+    NSURL *websiteURL = [NSURL URLWithString:urlString];
+    [[UIApplication sharedApplication] openURL:websiteURL];
+}
+
 @end

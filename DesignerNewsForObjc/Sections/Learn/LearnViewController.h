@@ -12,8 +12,14 @@
 
 // UI properties
 @property (weak, nonatomic) IBOutlet UIButton* closeButton;
+@property (weak, nonatomic) IBOutlet UIButton *learnButton;
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 
 // Respond to action
 - (IBAction)closeButtonDidTouch:(id)sender;
+- (IBAction)learnButtonDidTouch:(id)sender;
+- (IBAction)twitterButtonDidTouch:(id)sender;
+
+- (void)openWebSiteWithURL:(NSString *)urlString;
 
 @end

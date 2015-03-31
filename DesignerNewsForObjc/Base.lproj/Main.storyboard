@@ -207,6 +207,9 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="learnButtonDidTouch:" destination="DLx-vW-Cge" eventType="touchUpInside" id="Pvo-hd-9hH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbk-kA-2ew">
                                         <rect key="frame" x="0.0" y="210" width="280" height="70"/>
@@ -217,6 +220,9 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="twitterButtonDidTouch:" destination="DLx-vW-Cge" eventType="touchUpInside" id="pVz-Tq-YJI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15294117647058825" green="0.17647058823529413" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
@@ -249,6 +255,8 @@
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="Bij-Ms-WaE" id="bH1-8b-0SY"/>
+                        <outlet property="learnButton" destination="uiC-Ij-HTg" id="yQk-hB-boS"/>
+                        <outlet property="twitterButton" destination="pbk-kA-2ew" id="OrQ-8P-O8r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Dz-iZ-jyw" userLabel="First Responder" sceneMemberID="firstResponder"/>

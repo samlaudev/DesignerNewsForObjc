@@ -39,6 +39,22 @@ describe(@"LearnViewController", ^{
                 [controller.closeButton specsSimulateTap];
             });
         });
+        
+        context(@"when click learn button", ^{
+            it(@"should open website for url 'http://designcode.io/' ", ^{
+                [[controller should] receive:@selector(openWebSiteWithURL:)];
+                
+                [controller.learnButton specsSimulateTap];
+            });
+        });
+        
+        context(@"when click twitter button", ^{
+            it(@"should open website for url 'http://twitter.com/mengto'", ^{
+                [[controller should] receive:@selector(openWebSiteWithURL:)];
+                
+                [controller.twitterButton specsSimulateTap];
+            });
+        });
     });
 });
 
