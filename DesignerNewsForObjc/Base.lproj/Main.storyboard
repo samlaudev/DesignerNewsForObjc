@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gi2-r5-REX">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -165,17 +164,87 @@
                                     <action selector="closeButtonDidTouch:" destination="DLx-vW-Cge" eventType="touchUpInside" id="eya-aE-L5l"/>
                                 </connections>
                             </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkV-FC-odi" customClass="DesignableView" customModule="DesignerNewsForObjc" customModuleProvider="target">
+                                <rect key="frame" x="20" y="144" width="280" height="280"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg-credits" translatesAutoresizingMaskIntoConstraints="NO" id="Tha-3E-Ww4">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="140"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon-sketch" translatesAutoresizingMaskIntoConstraints="NO" id="mUD-sb-gMk" customClass="SpringImageView" customModule="DesignerNewsForObjc" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="35" width="64" height="61"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon-xcode" translatesAutoresizingMaskIntoConstraints="NO" id="b3B-OM-b8T" customClass="SpringImageView" customModule="DesignerNewsForObjc" customModuleProvider="target">
+                                        <rect key="frame" x="206" y="35" width="64" height="59"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="icon-book" translatesAutoresizingMaskIntoConstraints="NO" id="drf-nb-wAS" customClass="SpringImageView" customModule="DesignerNewsForObjc" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="18" width="125" height="122"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiC-Ij-HTg">
+                                        <rect key="frame" x="0.0" y="140" width="280" height="70"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <state key="normal" title="Learn in Sketch + Swift">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbk-kA-2ew">
+                                        <rect key="frame" x="0.0" y="210" width="280" height="70"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="@MengTo" image="icon-twitter">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.17647058823529413" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="8WC-jF-5js"/>
+                                    <constraint firstAttribute="width" constant="280" id="Fuc-St-qVb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0WG-bP-RPr" firstAttribute="top" secondItem="non-Zn-Ic5" secondAttribute="top" id="1Ck-31-OED"/>
                             <constraint firstItem="uPr-EV-VIk" firstAttribute="top" secondItem="0WG-bP-RPr" secondAttribute="bottom" id="4X4-9w-hbU"/>
+                            <constraint firstAttribute="centerX" secondItem="kkV-FC-odi" secondAttribute="centerX" id="5zT-uh-k3q"/>
                             <constraint firstAttribute="trailing" secondItem="Bij-Ms-WaE" secondAttribute="trailing" id="N1g-Ml-cpb"/>
                             <constraint firstAttribute="trailing" secondItem="0WG-bP-RPr" secondAttribute="trailing" id="QDI-1O-mgU"/>
                             <constraint firstItem="0WG-bP-RPr" firstAttribute="leading" secondItem="non-Zn-Ic5" secondAttribute="leading" id="c7x-Xp-xPp"/>
                             <constraint firstItem="uPr-EV-VIk" firstAttribute="top" secondItem="Bij-Ms-WaE" secondAttribute="bottom" id="eVf-Mu-Ipx"/>
                             <constraint firstItem="Bij-Ms-WaE" firstAttribute="leading" secondItem="non-Zn-Ic5" secondAttribute="leading" id="ihu-Jb-Arn"/>
                             <constraint firstItem="Bij-Ms-WaE" firstAttribute="top" secondItem="non-Zn-Ic5" secondAttribute="top" id="lLX-VT-r6Q"/>
+                            <constraint firstAttribute="centerY" secondItem="kkV-FC-odi" secondAttribute="centerY" id="sMG-Fx-j6N"/>
                         </constraints>
                     </view>
                     <connections>
@@ -359,12 +428,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg-credits" width="280" height="140"/>
         <image name="big-credits" width="47" height="44"/>
         <image name="big-login" width="38" height="38"/>
         <image name="big-recent" width="36" height="36"/>
         <image name="big-top" width="41" height="39"/>
+        <image name="icon-book" width="125" height="122"/>
         <image name="icon-comment" width="17" height="15"/>
         <image name="icon-hamburger" width="22" height="16"/>
+        <image name="icon-sketch" width="64" height="61"/>
+        <image name="icon-twitter" width="18" height="14"/>
         <image name="icon-upvote" width="18" height="16"/>
+        <image name="icon-xcode" width="64" height="59"/>
     </resources>
 </document>
