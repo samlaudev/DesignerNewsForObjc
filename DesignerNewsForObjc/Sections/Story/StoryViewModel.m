@@ -38,4 +38,21 @@
     }] logError] catchTo:[RACSignal empty]];
 }
 
+- (void)loadStoriesWithType:(StoryType)storyType updateUIBlock:(UpdateUIBlock)updateUIBlock;
+{
+    self.active = YES;
+    NSString* section = @"";
+    NSString* title = @"";
+    if (storyType == StoryTypeTop) {
+        title = @"Top Stories";
+    }
+    else if (storyType == StoryTypeRecent) {
+        title = @"Recent Stories";
+        section = @"recent";
+    }
+    [[self loadStoriesForSection:section page:1] subscribeNext:^(id x) {
+        updateUIBlock(title);
+    }];
+}
+
 @end

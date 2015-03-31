@@ -159,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="654" y="338"/>
         </scene>
-        <!--Top stories-->
+        <!--Top Stories-->
         <scene sceneID="Ke3-TL-UPz">
             <objects>
                 <tableViewController id="Ykq-8Z-NdT" customClass="StoryViewController" sceneMemberID="viewController">
@@ -268,7 +268,7 @@
                             <outlet property="delegate" destination="Ykq-8Z-NdT" id="hD9-uN-Igg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Top stories" id="NKj-Rp-hQY">
+                    <navigationItem key="navigationItem" title="Top Stories" id="NKj-Rp-hQY">
                         <barButtonItem key="leftBarButtonItem" image="icon-hamburger" id="Dqu-Oy-Gfy">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>

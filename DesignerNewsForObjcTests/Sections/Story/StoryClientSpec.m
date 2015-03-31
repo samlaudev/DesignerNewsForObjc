@@ -22,7 +22,7 @@ describe(@"StoryClient", ^{
                 fecthData = x;
             }];
             
-            [[expectFutureValue(fecthData) shouldEventuallyBeforeTimingOutAfter(15.0)] beNonNil];
+            [[expectFutureValue(fecthData) shouldEventuallyBeforeTimingOutAfter(2.0)] beNonNil];
         });
     });
 });

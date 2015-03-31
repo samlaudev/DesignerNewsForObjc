@@ -75,8 +75,16 @@
 #pragma mark - MenuViewController delegate
 - (void)menuViewControllerDidTouchTopStories:(MenuViewController*)controller
 {
-    self.viewModel.active = YES;
-    [[self.viewModel loadStoriesForSection:@"" page:1] subscribeNext:^(id x) {
+    [self.viewModel loadStoriesWithType:StoryTypeTop updateUIBlock:^(NSString *title) {
+        self.navigationItem.title = title;
+        [self.tableView reloadData];
+    }];
+}
+
+- (void)menuViewControllerDidTouchRecentStories:(MenuViewController*)controller
+{
+    [self.viewModel loadStoriesWithType:StoryTypeRecent updateUIBlock:^(NSString *title) {
+        self.navigationItem.title = title;
         [self.tableView reloadData];
     }];
 }

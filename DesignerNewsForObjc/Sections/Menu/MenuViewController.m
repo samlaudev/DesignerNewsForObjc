@@ -43,6 +43,9 @@
 
 - (IBAction)recentButtonDidTouch:(id)sender
 {
+    // Close view controller
+    [self closeButtonDidTouch:sender];
+    [self.delegate menuViewControllerDidTouchRecentStories:self];
 }
 
 - (IBAction)learnButtonDidTouch:(id)sender

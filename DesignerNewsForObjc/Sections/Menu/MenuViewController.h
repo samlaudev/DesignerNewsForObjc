@@ -13,6 +13,7 @@
 @protocol MenuViewControllerDelegate <NSObject>
 
 - (void)menuViewControllerDidTouchTopStories:(MenuViewController *)controller;
+- (void)menuViewControllerDidTouchRecentStories:(MenuViewController *)controller;
 
 @end
 
