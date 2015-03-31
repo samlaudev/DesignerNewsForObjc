@@ -13,6 +13,6 @@
 
 @interface StoryClient : NSObject
 
-+ (RACSignal*)storiesForSection:(NSString *)section page:(NSInteger)page;
++ (RACSubject*)storiesForSection:(NSString *)section page:(NSInteger)page;
 
 @end

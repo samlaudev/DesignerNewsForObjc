@@ -11,6 +11,7 @@
 @interface StoryViewModel ()
 
 @property (strong, nonatomic) NSArray* storiesArray;
+@property (assign, nonatomic, getter=isLoading) BOOL loading;
 
 @end
 
@@ -23,18 +24,18 @@
         return nil;
     _dataSource = [[ArrayDataSource alloc] initWithItems:@[] cellIdentifier:cellIdentifier configureCellBlock:configureCellBlock];
     // Data binding
-    [self loadStoriesForSection:@"" page:1];
+    RAC(self.dataSource, items) = [self loadStoriesForSection:@"" page:1];
     RAC(self, storiesArray) = RACObserve(self.dataSource, items);
-    
 
     return self;
 }
 
-- (void)loadStoriesForSection:(NSString *)section page:(NSInteger)page
+- (RACSignal*)loadStoriesForSection:(NSString*)section page:(NSInteger)page
 {
-    RAC(self.dataSource, items) = [[StoryClient storiesForSection:section page:page] map:^id(NSDictionary* JSONData) {
+    return [[[[StoryClient storiesForSection:section page:page] map:^id(NSDictionary* JSONData) {
+        self.active = NO;
         return [MTLJSONAdapter modelsOfClass:Story.class fromJSONArray:JSONData[@"stories"] error:nil];
-    }];
+    }] logError] catchTo:[RACSignal empty]];
 }
 
 @end

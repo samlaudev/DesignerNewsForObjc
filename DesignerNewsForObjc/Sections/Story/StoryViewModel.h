@@ -20,6 +20,6 @@
 @property (strong, nonatomic, readonly) ArrayDataSource* dataSource;
 @property (strong, nonatomic, readonly) NSArray* storiesArray;
 
-- (void)loadStoriesForSection:(NSString*)section page:(NSInteger)page;
+- (RACSignal *)loadStoriesForSection:(NSString*)section page:(NSInteger)page;
 
 @end

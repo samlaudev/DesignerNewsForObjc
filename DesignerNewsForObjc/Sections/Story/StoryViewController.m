@@ -9,6 +9,7 @@
 #import "StoryViewController.h"
 #import "StoryTableViewCell.h"
 #import "MenuViewController.h"
+#import "DesignerNewsForObjc-Swift.h"
 
 @interface StoryViewController () <MenuViewControllerDelegate>
 
@@ -37,11 +38,23 @@
     // setup table view data source
     self.tableView.dataSource = self.viewModel.dataSource;
     // observe view model's stories property, when it update, table view should reload data
-    @weakify(self)
-        [RACObserve(self.viewModel, storiesArray) subscribeNext : ^(id x) {
-        @strongify(self)
+    [RACObserve(self.viewModel, storiesArray) subscribeNext:^(id x) {
         [self.tableView reloadData];
-        }];
+    }];
+    // show loading indicator
+    [RACObserve(self.viewModel, active) subscribeNext:^(id loading) {
+        if ([loading boolValue]) {
+            [self.view showLoading];
+        }else {
+            [self.view hideLoading];
+        }
+    }];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.viewModel.active = YES;
 }
 
 #pragma mark - Prepare for segue
@@ -62,7 +75,10 @@
 #pragma mark - MenuViewController delegate
 - (void)menuViewControllerDidTouchTopStories:(MenuViewController*)controller
 {
-    [self.viewModel loadStoriesForSection:@"" page:1];
+    self.viewModel.active = YES;
+    [[self.viewModel loadStoriesForSection:@"" page:1] subscribeNext:^(id x) {
+        [self.tableView reloadData];
+    }];
 }
 
 @end

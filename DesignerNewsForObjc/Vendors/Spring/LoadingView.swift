@@ -22,7 +22,7 @@
 
 import UIKit
 
-public class LoadingView: UIView {
+@objc public class LoadingView: UIView {
 
     @IBOutlet public weak var indicatorView: SpringView!
 

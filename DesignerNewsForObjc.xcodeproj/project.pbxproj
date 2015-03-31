@@ -939,7 +939,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"TEST=0",
 				);
 				INFOPLIST_FILE = DesignerNewsForObjc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

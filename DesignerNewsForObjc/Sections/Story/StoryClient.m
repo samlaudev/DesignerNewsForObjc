@@ -10,28 +10,25 @@
 
 @implementation StoryClient
 
-+ (RACSignal*)storiesForSection:(NSString*)section page:(NSInteger)page
++ (RACSubject*)storiesForSection:(NSString*)section page:(NSInteger)page
 {
-    return [[RACSignal createSignal:^RACDisposable * (id<RACSubscriber> subscriber) {
-        NSDictionary *parameters = @{
-            @"page":[NSString stringWithFormat:@"%ld", (long)page],
-            @"client_id":clientID
-        };
-        
-        [[AFHTTPSessionManager manager] GET:[DesignerNewsURL stroiesURLString] parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-            NSLog(@"url string = %@", task.currentRequest.URL);
-            [subscriber sendNext:responseObject];
-            [subscriber sendCompleted];
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            [subscriber sendError:error];
-        }];
+    RACSubject* signal = [RACSubject subject];
 
-        return [RACDisposable disposableWithBlock:^{
+    NSDictionary* parameters = @{
+        @"page" : [NSString stringWithFormat:@"%ld", (long)page],
+        @"client_id" : clientID
+    };
 
-        }];
-    }] doError:^(NSError* error) {
-        NSLog(@"%@", error);
+    [[AFHTTPSessionManager manager] GET:[DesignerNewsURL stroiesURLString] parameters:parameters success:^(NSURLSessionDataTask* task, id responseObject) {
+                NSLog(@"url string = %@", task.currentRequest.URL);
+                [signal sendNext:responseObject];
+                [signal sendCompleted];
+    } failure:^(NSURLSessionDataTask* task, NSError* error) {
+                NSLog(@"url string = %@", task.currentRequest.URL);
+                [signal sendError:error];
     }];
+
+    return signal;
 }
 
 @end
