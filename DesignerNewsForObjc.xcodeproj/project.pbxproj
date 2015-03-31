@@ -10,6 +10,8 @@
 		0CBE0349DCE5CF755E4CD7B3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E162750A4A629A9920BC60 /* libPods.a */; };
 		1A0E492A1ACA70980062F829 /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E49291ACA70980062F829 /* LearnViewController.m */; };
 		1A0E492D1ACA714C0062F829 /* LearnViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E492C1ACA714C0062F829 /* LearnViewControllerSpec.m */; };
+		1A30CF7F1ACAA4BB004CA714 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A30CF7E1ACAA4BB004CA714 /* LoginViewController.m */; };
+		1A30CF811ACAA6AB004CA714 /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A30CF801ACAA6AB004CA714 /* LoginViewControllerSpec.m */; };
 		1A3ED4D31AC53EBB00F052AE /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ED4D21AC53EBB00F052AE /* StoryViewController.m */; };
 		1A3ED5101AC6B5F600F052AE /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ED50F1AC6B5F600F052AE /* ArrayDataSource.m */; };
 		1A3ED5171AC6B97300F052AE /* ArrayDataSourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ED5161AC6B97300F052AE /* ArrayDataSourceSpec.m */; };
@@ -83,6 +85,9 @@
 		1A0E49281ACA70980062F829 /* LearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnViewController.h; sourceTree = "<group>"; };
 		1A0E49291ACA70980062F829 /* LearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewController.m; sourceTree = "<group>"; };
 		1A0E492C1ACA714C0062F829 /* LearnViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewControllerSpec.m; sourceTree = "<group>"; };
+		1A30CF7D1ACAA4BB004CA714 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		1A30CF7E1ACAA4BB004CA714 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		1A30CF801ACAA6AB004CA714 /* LoginViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewControllerSpec.m; sourceTree = "<group>"; };
 		1A3ED4D11AC53EBB00F052AE /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewController.h; sourceTree = "<group>"; };
 		1A3ED4D21AC53EBB00F052AE /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewController.m; sourceTree = "<group>"; };
 		1A3ED50E1AC6B5F600F052AE /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
@@ -214,6 +219,8 @@
 		1A3ED4CF1AC53E5400F052AE /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1A30CF7D1ACAA4BB004CA714 /* LoginViewController.h */,
+				1A30CF7E1ACAA4BB004CA714 /* LoginViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -387,6 +394,7 @@
 		1A5807DD1AC711DE006F64D0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1A30CF801ACAA6AB004CA714 /* LoginViewControllerSpec.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -787,6 +795,7 @@
 			files = (
 				1AEF79CC1AC31BBE002DF6D0 /* SpringLabel.swift in Sources */,
 				1AEF79C11AC31BBE002DF6D0 /* ImageLoader.swift in Sources */,
+				1A30CF7F1ACAA4BB004CA714 /* LoginViewController.m in Sources */,
 				1A3ED4D31AC53EBB00F052AE /* StoryViewController.m in Sources */,
 				1AEF79C61AC31BBE002DF6D0 /* Misc.swift in Sources */,
 				1AEF79BB1AC31BBE002DF6D0 /* DesignableImageView.swift in Sources */,
@@ -837,6 +846,7 @@
 				1A5807EE1AC824CB006F64D0 /* StorySpec.m in Sources */,
 				1A9FEAB81AC9500D006EA4D4 /* UIViewController+Storyboard.m in Sources */,
 				1A3ED5171AC6B97300F052AE /* ArrayDataSourceSpec.m in Sources */,
+				1A30CF811ACAA6AB004CA714 /* LoginViewControllerSpec.m in Sources */,
 				1A6B8E431AC93B4C0021CDE4 /* MenuViewControllerSpec.m in Sources */,
 				1A0E492D1ACA714C0062F829 /* LearnViewControllerSpec.m in Sources */,
 				1A5807F21AC826D3006F64D0 /* TestHelper.m in Sources */,
