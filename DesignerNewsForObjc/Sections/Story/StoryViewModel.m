@@ -11,7 +11,6 @@
 @interface StoryViewModel ()
 
 @property (strong, nonatomic) NSArray* storiesArray;
-@property (assign, nonatomic, getter=isLoading) BOOL loading;
 
 @end
 

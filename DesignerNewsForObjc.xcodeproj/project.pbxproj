@@ -1016,6 +1016,17 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Kiwi\"",
+					"\"${PODS_ROOT}/Headers/Public/Mantle\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactiveViewModel\"",
+					"\"${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding\"",
+					"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources",
+				);
 				INFOPLIST_FILE = DesignerNewsForObjcTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1035,6 +1046,17 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Kiwi\"",
+					"\"${PODS_ROOT}/Headers/Public/Mantle\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactiveViewModel\"",
+					"\"${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding\"",
+					"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources",
 				);
 				INFOPLIST_FILE = DesignerNewsForObjcTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

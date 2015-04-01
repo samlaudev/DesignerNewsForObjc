@@ -10,6 +10,8 @@
 #import "LoginViewController.h"
 #import "UIViewController+Storyboard.h"
 #import "UIButton+Specs.h"
+#import <ReactiveCocoa.h>
+#import "DesignerNewsForObjc-Swift.h"
 
 SPEC_BEGIN(LoginViewControllerSpec)
 
@@ -18,27 +20,25 @@ describe(@"LoginViewController", ^{
     
     beforeEach(^{
         controller = [UIViewController loadViewControllerWithIdentifierForMainStoryboard:@"LoginViewController"];
+        [controller view];
     });
     
     afterEach(^{
         controller = nil;
     });
     
-    describe(@"Root View", ^{
-        __block UIView *view;
+    describe(@"Email Text Field", ^{
+        context(@"when touch text field", ^{
+            it(@"should not be nil", ^{
+                [[controller.emailTextField shouldNot] beNil];
+            });
         
-        beforeEach(^{
-            view = controller.view;
-        });
-        
-        context(@"when click close button", ^{
-            it(@"should dismiss login view controller", ^{
-                [[controller should] receive:@selector(dismissViewControllerAnimated:completion:)];
+            it(@"should change background image and icon", ^{
                 
-                [controller.closeButton specsSimulateTap];
             });
         });
     });
+
 });
 
 SPEC_END

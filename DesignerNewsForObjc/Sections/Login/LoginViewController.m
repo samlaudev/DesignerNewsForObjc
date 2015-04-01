@@ -19,16 +19,52 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // respond to when user click close button
+    self.closeButton.rac_command = [self closeButtonDidTouchCommand];
+    // text field notification
+    [self textFieldStartEndEditing];
 }
 
-#pragma mark - Respond to action
-- (IBAction)loginButtonDidTouch:(id)sender
+#pragma mark - Custom RACComand
+- (RACCommand*)closeButtonDidTouchCommand
 {
-    // Setup animation
-    self.dialogView.animation = @"zoomOut";
-    [self.dialogView animate];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    return [[RACCommand alloc] initWithSignalBlock:^RACSignal * (id input) {
+        // Setup animation
+        self.dialogView.animation = @"zoomOut";
+        [self.dialogView animate];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        return [RACSignal empty];
+    }];
+}
+
+#pragma mark - Text Field notification
+- (void)textFieldStartEndEditing
+{
+    // Respond to when email text start and end editing
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UITextFieldTextDidBeginEditingNotification object:self.emailTextField] subscribeNext:^(id x) {
+        [self.emailImageView animate];
+        self.emailImageView.image = [UIImage imageNamed:@"icon-mail-active"];
+        self.emailTextField.background = [UIImage imageNamed:@"input-outline-active"];
+    }];
+
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UITextFieldTextDidEndEditingNotification object:self.emailTextField] subscribeNext:^(id x) {
+        self.emailTextField.background = [UIImage imageNamed:@"input-outline"];
+        self.emailImageView.image = [UIImage imageNamed:@"icon-mail"];
+    }];
+
+    // Respond to when password text start and end editing
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UITextFieldTextDidBeginEditingNotification object:self.passwordTextField] subscribeNext:^(id x) {
+        [self.passwordImageView animate];
+        self.passwordTextField.background = [UIImage imageNamed:@"input-outline-active"];
+        self.passwordImageView.image = [UIImage imageNamed:@"icon-password-active"];
+    }];
+
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UITextFieldTextDidEndEditingNotification object:self.passwordTextField] subscribeNext:^(id x) {
+        self.passwordTextField.background = [UIImage imageNamed:@"input-outline"];
+        self.passwordImageView.image = [UIImage imageNamed:@"icon-password"];
+    }];
 }
 
 @end
