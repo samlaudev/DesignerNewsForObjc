@@ -39,6 +39,9 @@
 		1A9D3A851AC6E96B00296A0C /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D3A841AC6E96B00296A0C /* Story.m */; };
 		1A9FEAB81AC9500D006EA4D4 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9FEAB71AC9500D006EA4D4 /* UIViewController+Storyboard.m */; };
 		1AD915781AC3156100B6F6A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD915771AC3156100B6F6A2 /* AppDelegate.m */; };
+		1AE61D341ACCD6AF00A84B96 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61D331ACCD6AF00A84B96 /* LoginViewModel.m */; };
+		1AE61D361ACCDB2600A84B96 /* LoginViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61D351ACCDB2600A84B96 /* LoginViewModelSpec.m */; };
+		1AE61D391ACCE1FF00A84B96 /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61D381ACCE1FF00A84B96 /* NSString+Check.m */; };
 		1AEF79B61AC31BBE002DF6D0 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF79981AC31BBE002DF6D0 /* AsyncButton.swift */; };
 		1AEF79B71AC31BBE002DF6D0 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF79991AC31BBE002DF6D0 /* AsyncImageView.swift */; };
 		1AEF79B81AC31BBE002DF6D0 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF799A1AC31BBE002DF6D0 /* AutoTextView.swift */; };
@@ -134,6 +137,11 @@
 		1A9FEAB71AC9500D006EA4D4 /* UIViewController+Storyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Storyboard.m"; path = "../../../DesignerNewsForObjcTests/General/Categories/UIViewController+Storyboard.m"; sourceTree = "<group>"; };
 		1AD915761AC3156100B6F6A2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1AD915771AC3156100B6F6A2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1AE61D321ACCD6AF00A84B96 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		1AE61D331ACCD6AF00A84B96 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		1AE61D351ACCDB2600A84B96 /* LoginViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModelSpec.m; sourceTree = "<group>"; };
+		1AE61D371ACCE1FF00A84B96 /* NSString+Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Check.h"; sourceTree = "<group>"; };
+		1AE61D381ACCE1FF00A84B96 /* NSString+Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Check.m"; sourceTree = "<group>"; };
 		1AEF79981AC31BBE002DF6D0 /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		1AEF79991AC31BBE002DF6D0 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		1AEF799A1AC31BBE002DF6D0 /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
@@ -221,6 +229,8 @@
 			children = (
 				1A30CF7D1ACAA4BB004CA714 /* LoginViewController.h */,
 				1A30CF7E1ACAA4BB004CA714 /* LoginViewController.m */,
+				1AE61D321ACCD6AF00A84B96 /* LoginViewModel.h */,
+				1AE61D331ACCD6AF00A84B96 /* LoginViewModel.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -395,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				1A30CF801ACAA6AB004CA714 /* LoginViewControllerSpec.m */,
+				1AE61D351ACCDB2600A84B96 /* LoginViewModelSpec.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -504,6 +515,8 @@
 			children = (
 				1A9FEAB61AC9500D006EA4D4 /* UIViewController+Storyboard.h */,
 				1A9FEAB71AC9500D006EA4D4 /* UIViewController+Storyboard.m */,
+				1AE61D371ACCE1FF00A84B96 /* NSString+Check.h */,
+				1AE61D381ACCE1FF00A84B96 /* NSString+Check.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -801,6 +814,7 @@
 				1AEF79BB1AC31BBE002DF6D0 /* DesignableImageView.swift in Sources */,
 				1AEF79CB1AC31BBE002DF6D0 /* SpringImageView.swift in Sources */,
 				1A5041B71AC30EF6006D25FC /* main.m in Sources */,
+				1AE61D341ACCD6AF00A84B96 /* LoginViewModel.m in Sources */,
 				1A6B8E351AC8FF030021CDE4 /* MenuViewController.m in Sources */,
 				1AEF79C71AC31BBE002DF6D0 /* SoundPlayer.swift in Sources */,
 				1AEF79CE1AC31BBE002DF6D0 /* SpringTextView.swift in Sources */,
@@ -816,6 +830,7 @@
 				1AEF79B61AC31BBE002DF6D0 /* AsyncButton.swift in Sources */,
 				1A6B8E311AC8E6B20021CDE4 /* StoryTableViewCell.m in Sources */,
 				1AEF79C31AC31BBE002DF6D0 /* KeyboardLayoutConstraint.swift in Sources */,
+				1AE61D391ACCE1FF00A84B96 /* NSString+Check.m in Sources */,
 				1AEF79CA1AC31BBE002DF6D0 /* SpringButton.swift in Sources */,
 				1A0E492A1ACA70980062F829 /* LearnViewController.m in Sources */,
 				1AEF79B71AC31BBE002DF6D0 /* AsyncImageView.swift in Sources */,
@@ -843,6 +858,7 @@
 				1A6B8E3F1AC93AB80021CDE4 /* UIBarButtonItem+Specs.m in Sources */,
 				1A5807D71AC6F99D006F64D0 /* DesignerNewsURLSpec.m in Sources */,
 				1A6B8E411AC93AB80021CDE4 /* UIView+Specs.m in Sources */,
+				1AE61D361ACCDB2600A84B96 /* LoginViewModelSpec.m in Sources */,
 				1A5807EE1AC824CB006F64D0 /* StorySpec.m in Sources */,
 				1A9FEAB81AC9500D006EA4D4 /* UIViewController+Storyboard.m in Sources */,
 				1A3ED5171AC6B97300F052AE /* ArrayDataSourceSpec.m in Sources */,

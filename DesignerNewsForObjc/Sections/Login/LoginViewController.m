@@ -11,6 +11,8 @@
 
 @interface LoginViewController ()
 
+@property (strong, nonatomic) LoginViewModel* viewModel;
+
 @end
 
 @implementation LoginViewController
@@ -19,10 +21,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // respond to when user click close button
-    self.closeButton.rac_command = [self closeButtonDidTouchCommand];
+    // bind with view model
+    [self bindViewModel];
     // text field notification
     [self textFieldStartEndEditing];
+}
+
+- (void)bindViewModel
+{
+    self.closeButton.rac_command = [self closeButtonDidTouchCommand];
+    self.loginButton.rac_command = self.viewModel.loginButtonCommand;
+    RAC(self.viewModel, email) = self.emailTextField.rac_textSignal;
+    RAC(self.viewModel, password) = self.passwordTextField.rac_textSignal;
+}
+
+#pragma mark - Lazy initialization
+- (LoginViewModel*)viewModel
+{
+    if (!_viewModel) {
+        _viewModel = [[LoginViewModel alloc] init];
+    }
+
+    return _viewModel;
 }
 
 #pragma mark - Custom RACComand
