@@ -10,6 +10,8 @@
 		0CBE0349DCE5CF755E4CD7B3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E162750A4A629A9920BC60 /* libPods.a */; };
 		1A0E492A1ACA70980062F829 /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E49291ACA70980062F829 /* LearnViewController.m */; };
 		1A0E492D1ACA714C0062F829 /* LearnViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E492C1ACA714C0062F829 /* LearnViewControllerSpec.m */; };
+		1A289ED01ACE68AB006BC750 /* login_conf.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A289ECE1ACE68AB006BC750 /* login_conf.json */; };
+		1A289ED11ACE68AB006BC750 /* login_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A289ECF1ACE68AB006BC750 /* login_response.json */; };
 		1A30CF7F1ACAA4BB004CA714 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A30CF7E1ACAA4BB004CA714 /* LoginViewController.m */; };
 		1A30CF811ACAA6AB004CA714 /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A30CF801ACAA6AB004CA714 /* LoginViewControllerSpec.m */; };
 		1A3ED4D31AC53EBB00F052AE /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ED4D21AC53EBB00F052AE /* StoryViewController.m */; };
@@ -88,6 +90,8 @@
 		1A0E49281ACA70980062F829 /* LearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnViewController.h; sourceTree = "<group>"; };
 		1A0E49291ACA70980062F829 /* LearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewController.m; sourceTree = "<group>"; };
 		1A0E492C1ACA714C0062F829 /* LearnViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewControllerSpec.m; sourceTree = "<group>"; };
+		1A289ECE1ACE68AB006BC750 /* login_conf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login_conf.json; sourceTree = "<group>"; };
+		1A289ECF1ACE68AB006BC750 /* login_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login_response.json; sourceTree = "<group>"; };
 		1A30CF7D1ACAA4BB004CA714 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1A30CF7E1ACAA4BB004CA714 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		1A30CF801ACAA6AB004CA714 /* LoginViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewControllerSpec.m; sourceTree = "<group>"; };
@@ -441,6 +445,8 @@
 		1A5807E61AC7A6CA006F64D0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1A289ECE1ACE68AB006BC750 /* login_conf.json */,
+				1A289ECF1ACE68AB006BC750 /* login_response.json */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -731,7 +737,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A289ED01ACE68AB006BC750 /* login_conf.json in Resources */,
 				1A5807EA1AC7A708006F64D0 /* stories_response.json in Resources */,
+				1A289ED11ACE68AB006BC750 /* login_response.json in Resources */,
 				1A5807EB1AC7A708006F64D0 /* stories_conf.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

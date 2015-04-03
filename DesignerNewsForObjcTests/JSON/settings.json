@@ -1,0 +1,8 @@
+[
+    {
+        "include" : "./Story/stories_conf.json"
+    },
+    {
+        "include" : "./Login/login_conf.json"
+    }
+]
