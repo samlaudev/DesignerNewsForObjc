@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "DesignerNewsForObjc-Swift.h"
+#import "LoginClient.h"
 
 @interface LoginViewController ()
 

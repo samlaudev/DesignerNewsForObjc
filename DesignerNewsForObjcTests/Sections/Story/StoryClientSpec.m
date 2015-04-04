@@ -20,9 +20,9 @@ describe(@"StoryClient", ^{
             RACSignal *signal = [StoryClient storiesForSection:@"" page:1];
             [signal subscribeNext:^(id x) {
                 fecthData = x;
+            } completed:^{
+                [[fecthData shouldNot] beNil];
             }];
-            
-            [[expectFutureValue(fecthData) shouldEventuallyBeforeTimingOutAfter(2.0)] beNonNil];
         });
     });
 });

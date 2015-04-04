@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		0CBE0349DCE5CF755E4CD7B3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E162750A4A629A9920BC60 /* libPods.a */; };
 		1A0E492A1ACA70980062F829 /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E49291ACA70980062F829 /* LearnViewController.m */; };
-		1A0E492D1ACA714C0062F829 /* LearnViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E492C1ACA714C0062F829 /* LearnViewControllerSpec.m */; };
 		1A289ED01ACE68AB006BC750 /* login_conf.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A289ECE1ACE68AB006BC750 /* login_conf.json */; };
 		1A289ED11ACE68AB006BC750 /* login_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A289ECF1ACE68AB006BC750 /* login_response.json */; };
+		1A289ED41ACE7168006BC750 /* LearnViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A289ED31ACE7168006BC750 /* LearnViewControllerSpec.m */; };
+		1A289ED61ACE728D006BC750 /* LoginClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A289ED51ACE728D006BC750 /* LoginClientSpec.m */; };
+		1A289ED91ACE72B0006BC750 /* LoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A289ED81ACE72B0006BC750 /* LoginClient.m */; };
 		1A30CF7F1ACAA4BB004CA714 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A30CF7E1ACAA4BB004CA714 /* LoginViewController.m */; };
 		1A30CF811ACAA6AB004CA714 /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A30CF801ACAA6AB004CA714 /* LoginViewControllerSpec.m */; };
 		1A3ED4D31AC53EBB00F052AE /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ED4D21AC53EBB00F052AE /* StoryViewController.m */; };
@@ -89,9 +91,12 @@
 /* Begin PBXFileReference section */
 		1A0E49281ACA70980062F829 /* LearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnViewController.h; sourceTree = "<group>"; };
 		1A0E49291ACA70980062F829 /* LearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewController.m; sourceTree = "<group>"; };
-		1A0E492C1ACA714C0062F829 /* LearnViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewControllerSpec.m; sourceTree = "<group>"; };
 		1A289ECE1ACE68AB006BC750 /* login_conf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login_conf.json; sourceTree = "<group>"; };
 		1A289ECF1ACE68AB006BC750 /* login_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login_response.json; sourceTree = "<group>"; };
+		1A289ED31ACE7168006BC750 /* LearnViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewControllerSpec.m; sourceTree = "<group>"; };
+		1A289ED51ACE728D006BC750 /* LoginClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginClientSpec.m; sourceTree = "<group>"; };
+		1A289ED71ACE72B0006BC750 /* LoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginClient.h; sourceTree = "<group>"; };
+		1A289ED81ACE72B0006BC750 /* LoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginClient.m; sourceTree = "<group>"; };
 		1A30CF7D1ACAA4BB004CA714 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1A30CF7E1ACAA4BB004CA714 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		1A30CF801ACAA6AB004CA714 /* LoginViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewControllerSpec.m; sourceTree = "<group>"; };
@@ -213,12 +218,12 @@
 			path = Learn;
 			sourceTree = "<group>";
 		};
-		1A0E492B1ACA71330062F829 /* Login */ = {
+		1A289ED21ACE7168006BC750 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
-				1A0E492C1ACA714C0062F829 /* LearnViewControllerSpec.m */,
+				1A289ED31ACE7168006BC750 /* LearnViewControllerSpec.m */,
 			);
-			path = Login;
+			path = Learn;
 			sourceTree = "<group>";
 		};
 		1A3ED4CE1AC53E5400F052AE /* Comment */ = {
@@ -235,6 +240,8 @@
 				1A30CF7E1ACAA4BB004CA714 /* LoginViewController.m */,
 				1AE61D321ACCD6AF00A84B96 /* LoginViewModel.h */,
 				1AE61D331ACCD6AF00A84B96 /* LoginViewModel.m */,
+				1A289ED71ACE72B0006BC750 /* LoginClient.h */,
+				1A289ED81ACE72B0006BC750 /* LoginClient.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -389,7 +396,7 @@
 		1A5807DB1AC711DE006F64D0 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				1A0E492B1ACA71330062F829 /* Login */,
+				1A289ED21ACE7168006BC750 /* Learn */,
 				1A6B8E381AC933370021CDE4 /* Menu */,
 				1A5807DC1AC711DE006F64D0 /* Comment */,
 				1A5807DD1AC711DE006F64D0 /* Login */,
@@ -410,6 +417,7 @@
 			children = (
 				1A30CF801ACAA6AB004CA714 /* LoginViewControllerSpec.m */,
 				1AE61D351ACCDB2600A84B96 /* LoginViewModelSpec.m */,
+				1A289ED51ACE728D006BC750 /* LoginClientSpec.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -850,6 +858,7 @@
 				1A9D3A851AC6E96B00296A0C /* Story.m in Sources */,
 				1AEF79D21AC31BBE002DF6D0 /* UnwindSegue.swift in Sources */,
 				1A5807D41AC6F7FB006F64D0 /* DesignerNewsURL.m in Sources */,
+				1A289ED91ACE72B0006BC750 /* LoginClient.m in Sources */,
 				1A5807DA1AC70BC9006F64D0 /* StoryClient.m in Sources */,
 				1AEF79D01AC31BBE002DF6D0 /* TransitionManager.swift in Sources */,
 				1AEF79B91AC31BBE002DF6D0 /* BlurView.swift in Sources */,
@@ -866,17 +875,18 @@
 				1A6B8E3F1AC93AB80021CDE4 /* UIBarButtonItem+Specs.m in Sources */,
 				1A5807D71AC6F99D006F64D0 /* DesignerNewsURLSpec.m in Sources */,
 				1A6B8E411AC93AB80021CDE4 /* UIView+Specs.m in Sources */,
+				1A289ED41ACE7168006BC750 /* LearnViewControllerSpec.m in Sources */,
 				1AE61D361ACCDB2600A84B96 /* LoginViewModelSpec.m in Sources */,
 				1A5807EE1AC824CB006F64D0 /* StorySpec.m in Sources */,
 				1A9FEAB81AC9500D006EA4D4 /* UIViewController+Storyboard.m in Sources */,
 				1A3ED5171AC6B97300F052AE /* ArrayDataSourceSpec.m in Sources */,
 				1A30CF811ACAA6AB004CA714 /* LoginViewControllerSpec.m in Sources */,
 				1A6B8E431AC93B4C0021CDE4 /* MenuViewControllerSpec.m in Sources */,
-				1A0E492D1ACA714C0062F829 /* LearnViewControllerSpec.m in Sources */,
 				1A5807F21AC826D3006F64D0 /* TestHelper.m in Sources */,
 				1A6B8E401AC93AB80021CDE4 /* UIButton+Specs.m in Sources */,
 				1A6B8E371AC924EB0021CDE4 /* StoryViewControllerSpec.m in Sources */,
 				1A5807FF1AC8B43B006F64D0 /* StoryViewModelSpec.m in Sources */,
+				1A289ED61ACE728D006BC750 /* LoginClientSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
