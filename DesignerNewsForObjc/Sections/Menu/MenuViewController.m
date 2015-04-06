@@ -50,6 +50,7 @@
                 [LocalStore removeToken];
             }
             [self.closeButton.rac_command execute:nil];
+            [self.delegate menuViewControllerDidTouchLogout:self];
 
             return [RACSignal empty];
         }];

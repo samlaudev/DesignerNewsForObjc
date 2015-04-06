@@ -546,6 +546,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loginBarButton" destination="ura-5W-5Ai" id="sms-eZ-RcL"/>
                         <segue destination="sOK-Tx-XTI" kind="show" identifier="CommentSegue" id="RRl-Pu-KRx"/>
                         <segue destination="UTK-xh-K9h" kind="presentation" identifier="MenuSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="f3Q-ae-IkQ"/>
                     </connections>

@@ -52,7 +52,7 @@
         _viewModel.dismissBlock = ^() {
             @strongify(self)
             [self dismissViewControllerAnimated:YES completion:nil];
-            [self reloadStoryBlock];
+            self.reloadStoryBlock();
         };
     }
 

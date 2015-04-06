@@ -91,8 +91,16 @@ describe(@"MenuViewController", ^{
         });
         
         context(@"when click logout button", ^{
+            beforeEach(^{
+                id delegate = [KWMock mockForProtocol:@protocol(MenuViewControllerDelegate)];
+                [[delegate should] receive:@selector(menuViewControllerDidTouchLogout:)];
+                controller.delegate = delegate;
+            });
+            
             it(@"should remove token if user has login", ^{
                 [[controller should] receive:@selector(dismissViewControllerAnimated:completion:)];
+                id delegate = controller.delegate;
+                [[delegate should] receive:@selector(menuViewControllerDidTouchLogout:)];
                 
                 [controller.logoutButton.rac_command execute:nil];
             });

@@ -68,6 +68,7 @@
         LoginViewController *destViewController = (LoginViewController*)segue.destinationViewController;
         destViewController.reloadStoryBlock = ^() {
             [self fetchStoriesForSection:@"" title:@"Top Stories"];
+            self.loginBarButton.enabled = NO;
         };
     }
 }
@@ -87,6 +88,11 @@
 - (void)menuViewControllerDidTouchRecentStories:(MenuViewController*)controller
 {
     [self fetchStoriesForSection:@"recent" title:@"Recent Stories"];
+}
+
+- (void)menuViewControllerDidTouchLogout:(MenuViewController *)controller
+{
+    self.loginBarButton.enabled = YES;
 }
 
 - (void)fetchStoriesForSection:(NSString*)section title:(NSString*)title

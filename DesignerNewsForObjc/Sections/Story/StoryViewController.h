@@ -12,5 +12,6 @@
 @interface StoryViewController : UITableViewController
 
 @property (strong, nonatomic, readonly) StoryViewModel* viewModel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *loginBarButton;
 
 @end

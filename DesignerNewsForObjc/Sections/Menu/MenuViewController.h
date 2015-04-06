@@ -14,6 +14,7 @@
 
 - (void)menuViewControllerDidTouchTopStories:(MenuViewController*)controller;
 - (void)menuViewControllerDidTouchRecentStories:(MenuViewController*)controller;
+- (void)menuViewControllerDidTouchLogout:(MenuViewController*)controller;
 
 @end
 
