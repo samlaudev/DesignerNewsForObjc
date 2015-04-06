@@ -34,6 +34,13 @@
     self.loginButton.rac_command = self.viewModel.loginButtonCommand;
     RAC(self.viewModel, email) = self.emailTextField.rac_textSignal;
     RAC(self.viewModel, password) = self.passwordTextField.rac_textSignal;
+    [RACObserve(self.viewModel, active) subscribeNext:^(id x) {
+        if ([x boolValue]) {
+            [self.view showLoading];
+        }else {
+            [self.view hideLoading];
+        }
+    }];
 }
 
 #pragma mark - Lazy initialization
@@ -41,6 +48,12 @@
 {
     if (!_viewModel) {
         _viewModel = [[LoginViewModel alloc] init];
+        @weakify(self)
+        _viewModel.dismissBlock = ^() {
+            @strongify(self)
+            [self dismissViewControllerAnimated:YES completion:nil];
+            [self reloadStoryBlock];
+        };
     }
 
     return _viewModel;

@@ -8,6 +8,8 @@
 
 #import "LoginViewModel.h"
 #import "NSString+Check.h"
+#import "LoginClient.h"
+#import "LocalStore.h"
 
 @interface LoginViewModel ()
 
@@ -16,14 +18,31 @@
 @end
 
 @implementation LoginViewModel
+#pragma mark - Initialization
+- (instancetype)init
+{
+    self = [super init];
+    if (!self) {
+        return self;
+    }
+
+    return self;
+}
 
 #pragma mark - Lazy initialization
 - (RACCommand*)loginButtonCommand
 {
     if (!_loginButtonCommand) {
         _loginButtonCommand = [[RACCommand alloc] initWithEnabled:[self checkEmailPasswordSignal] signalBlock:^RACSignal * (id input) {
+            self.active = YES;
             
-            return [RACSignal empty];
+            return [[LoginClient loginWithUsername:self.email password:self.password] doNext:^(NSString *token) {
+                self.active = NO;
+                // Save the token
+                [LocalStore saveToken:token];
+                // Dismiss view controller and fetch data, reload
+                self.dismissBlock();
+            }];
         }];
     }
 
@@ -35,7 +54,7 @@
     RACSignal* emailSignal = RACObserve(self, email);
     RACSignal* passwordSignal = RACObserve(self, password);
 
-    return [RACSignal combineLatest:@[ emailSignal, passwordSignal ] reduce:^(NSString* email, NSString* password){
+    return [RACSignal combineLatest:@[ emailSignal, passwordSignal ] reduce:^(NSString* email, NSString* password) {
         BOOL result = [email isValidEmail] && [password isValidPassword];
         
         return @(result);

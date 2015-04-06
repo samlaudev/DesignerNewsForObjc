@@ -42,6 +42,8 @@
 		1A9D3A821AC6E4E800296A0C /* StoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D3A811AC6E4E800296A0C /* StoryViewModel.m */; };
 		1A9D3A851AC6E96B00296A0C /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D3A841AC6E96B00296A0C /* Story.m */; };
 		1A9FEAB81AC9500D006EA4D4 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9FEAB71AC9500D006EA4D4 /* UIViewController+Storyboard.m */; };
+		1AABBFD11AD26C0900FC86A7 /* LocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABBFD01AD26C0900FC86A7 /* LocalStore.m */; };
+		1AABBFD41AD26C9C00FC86A7 /* LocalStoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABBFD31AD26C9C00FC86A7 /* LocalStoreSpec.m */; };
 		1AD915781AC3156100B6F6A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD915771AC3156100B6F6A2 /* AppDelegate.m */; };
 		1AE61D341ACCD6AF00A84B96 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61D331ACCD6AF00A84B96 /* LoginViewModel.m */; };
 		1AE61D361ACCDB2600A84B96 /* LoginViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61D351ACCDB2600A84B96 /* LoginViewModelSpec.m */; };
@@ -144,6 +146,9 @@
 		1A9D3A841AC6E96B00296A0C /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 		1A9FEAB61AC9500D006EA4D4 /* UIViewController+Storyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Storyboard.h"; path = "../../../DesignerNewsForObjcTests/General/Categories/UIViewController+Storyboard.h"; sourceTree = "<group>"; };
 		1A9FEAB71AC9500D006EA4D4 /* UIViewController+Storyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Storyboard.m"; path = "../../../DesignerNewsForObjcTests/General/Categories/UIViewController+Storyboard.m"; sourceTree = "<group>"; };
+		1AABBFCF1AD26C0900FC86A7 /* LocalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalStore.h; sourceTree = "<group>"; };
+		1AABBFD01AD26C0900FC86A7 /* LocalStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalStore.m; sourceTree = "<group>"; };
+		1AABBFD31AD26C9C00FC86A7 /* LocalStoreSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalStoreSpec.m; sourceTree = "<group>"; };
 		1AD915761AC3156100B6F6A2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1AD915771AC3156100B6F6A2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1AE61D321ACCD6AF00A84B96 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
@@ -266,6 +271,7 @@
 		1A3ED5111AC6B6AD00F052AE /* General */ = {
 			isa = PBXGroup;
 			children = (
+				1AABBFD21AD26C8100FC86A7 /* Persistence */,
 				1A5807D51AC6F98A006F64D0 /* Network */,
 				1A3ED5121AC6B6AD00F052AE /* Categories */,
 				1A3ED5131AC6B6AD00F052AE /* DataSources */,
@@ -494,6 +500,23 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		1AABBFCE1AD26BF900FC86A7 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				1AABBFCF1AD26C0900FC86A7 /* LocalStore.h */,
+				1AABBFD01AD26C0900FC86A7 /* LocalStore.m */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		1AABBFD21AD26C8100FC86A7 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				1AABBFD31AD26C9C00FC86A7 /* LocalStoreSpec.m */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		1AD915751AC3156100B6F6A2 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +538,7 @@
 		1AD9157A1AC3167300B6F6A2 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				1AABBFCE1AD26BF900FC86A7 /* Persistence */,
 				1A5807D11AC6F7ED006F64D0 /* Network */,
 				1AD9157B1AC3167300B6F6A2 /* Categories */,
 				1AD9157C1AC3167300B6F6A2 /* DataSources */,
@@ -863,6 +887,7 @@
 				1AEF79D01AC31BBE002DF6D0 /* TransitionManager.swift in Sources */,
 				1AEF79B91AC31BBE002DF6D0 /* BlurView.swift in Sources */,
 				1AEF79CF1AC31BBE002DF6D0 /* SpringView.swift in Sources */,
+				1AABBFD11AD26C0900FC86A7 /* LocalStore.m in Sources */,
 				1AEF79D11AC31BBE002DF6D0 /* TransitionZoom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -885,6 +910,7 @@
 				1A5807F21AC826D3006F64D0 /* TestHelper.m in Sources */,
 				1A6B8E401AC93AB80021CDE4 /* UIButton+Specs.m in Sources */,
 				1A6B8E371AC924EB0021CDE4 /* StoryViewControllerSpec.m in Sources */,
+				1AABBFD41AD26C9C00FC86A7 /* LocalStoreSpec.m in Sources */,
 				1A5807FF1AC8B43B006F64D0 /* StoryViewModelSpec.m in Sources */,
 				1A289ED61ACE728D006BC750 /* LoginClientSpec.m in Sources */,
 			);

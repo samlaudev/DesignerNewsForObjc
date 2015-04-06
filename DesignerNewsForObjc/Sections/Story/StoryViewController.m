@@ -10,6 +10,7 @@
 #import "StoryTableViewCell.h"
 #import "MenuViewController.h"
 #import "DesignerNewsForObjc-Swift.h"
+#import "LoginViewController.h"
 
 @interface StoryViewController () <MenuViewControllerDelegate>
 
@@ -63,6 +64,11 @@
     if ([segue.identifier isEqualToString:@"MenuSegue"]) {
         MenuViewController* destViewController = (MenuViewController*)segue.destinationViewController;
         destViewController.delegate = self;
+    }else if ([segue.identifier isEqualToString:@"LoginSegue"]) {
+        LoginViewController *destViewController = (LoginViewController*)segue.destinationViewController;
+        destViewController.reloadStoryBlock = ^() {
+            [self fetchStoriesForSection:@"" title:@"Top Stories"];
+        };
     }
 }
 

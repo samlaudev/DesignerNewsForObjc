@@ -33,7 +33,7 @@
         [subject sendError:error];
     }];
 
-    return subject;
+    return [[subject logError] catchTo:[RACSignal empty]];
 }
 
 @end

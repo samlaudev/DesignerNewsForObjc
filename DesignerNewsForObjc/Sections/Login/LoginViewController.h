@@ -15,6 +15,8 @@
 @class SpringImageView;
 @class DesignableButton;
 
+typedef void(^ReloadStoryBlock)(void);
+
 @interface LoginViewController : UIViewController
 
 // UI properties
@@ -27,5 +29,6 @@
 @property (weak, nonatomic) IBOutlet SpringImageView* passwordImageView;
 
 @property (strong, nonatomic, readonly) LoginViewModel *viewModel;
+@property (copy, nonatomic) ReloadStoryBlock reloadStoryBlock;
 
 @end
