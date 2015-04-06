@@ -12,22 +12,20 @@
 
 @protocol MenuViewControllerDelegate <NSObject>
 
-- (void)menuViewControllerDidTouchTopStories:(MenuViewController *)controller;
-- (void)menuViewControllerDidTouchRecentStories:(MenuViewController *)controller;
+- (void)menuViewControllerDidTouchTopStories:(MenuViewController*)controller;
+- (void)menuViewControllerDidTouchRecentStories:(MenuViewController*)controller;
 
 @end
 
 @interface MenuViewController : UIViewController
 
 // UI properties
-@property (weak, nonatomic) IBOutlet UIButton *topStoriesButton;
-@property (weak, nonatomic) IBOutlet UIButton *recentButton;
-@property (weak, nonatomic) IBOutlet UIButton *learnButton;
-@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+@property (weak, nonatomic) IBOutlet UIButton* topStoriesButton;
+@property (weak, nonatomic) IBOutlet UIButton* recentButton;
+@property (weak, nonatomic) IBOutlet UIButton* learnButton;
+@property (weak, nonatomic) IBOutlet UIButton* logoutButton;
+@property (weak, nonatomic) IBOutlet UIButton* closeButton;
 // Delegate
 @property (weak, nonatomic) id<MenuViewControllerDelegate> delegate;
-
-// Respond to action
-- (IBAction)closeButtonDidTouch:(id)sender;
 
 @end

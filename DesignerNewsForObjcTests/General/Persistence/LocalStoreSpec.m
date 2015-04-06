@@ -9,17 +9,29 @@
 #import <Kiwi/Kiwi.h>
 #import "LocalStore.h"
 
-
 SPEC_BEGIN(LocalStoreSpec)
 
 describe(@"LocalStore", ^{
 
-    context(@"When save the token", ^{
-        it(@"have the token that can't be empty", ^{
+    context(@"when save the token", ^{
+        it(@"should have the token that can't be empty", ^{
             [LocalStore saveToken:@"123456"];
             [[[LocalStore getToken] should] equal:@"123456"];
         });
+        
+        it(@"should has login", ^{
+            [LocalStore saveToken:@"123456"];
+            [[theValue([LocalStore isHasLogin]) should] beYes];
+        });
     });
+    
+    context(@"when remove token", ^{
+        it(@"should be empty", ^{
+            [LocalStore removeToken];
+            [[[LocalStore getToken] should] beNil];
+        });
+    });
+
 });
 
 SPEC_END

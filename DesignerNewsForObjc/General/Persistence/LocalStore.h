@@ -11,6 +11,8 @@
 @interface LocalStore : NSObject
 
 + (void)saveToken:(NSString *)token;
++ (void)removeToken;
 + (NSString *)getToken;
++ (BOOL)isHasLogin;
 
 @end

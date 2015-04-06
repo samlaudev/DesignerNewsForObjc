@@ -26,4 +26,14 @@ NSString* const tokenKey = @"tokenKey";
     return [[NSUserDefaults standardUserDefaults] stringForKey:tokenKey];
 }
 
++ (BOOL)isHasLogin
+{
+    return [LocalStore getToken] != nil ? YES : NO;
+}
+
++ (void)removeToken
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:tokenKey];
+}
+
 @end

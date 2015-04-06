@@ -166,6 +166,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNT-0a-GVP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="com-I0-FOZ" customClass="DesignableView" customModule="DesignerNewsForObjc" customModuleProvider="target">
                                 <rect key="frame" x="30" y="154" width="260" height="260"/>
                                 <subviews>
@@ -176,9 +182,6 @@
                                         <state key="normal" image="big-top">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="topStoriesButtonDidTouch:" destination="UTK-xh-K9h" eventType="touchUpInside" id="mWf-Cq-Wa5"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Top Stories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wb-Vk-DQh">
                                         <rect key="frame" x="27" y="79" width="77" height="21"/>
@@ -193,9 +196,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="recentButtonDidTouch:" destination="UTK-xh-K9h" eventType="touchUpInside" id="IQl-gm-GdJ"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quP-zj-dLD">
                                         <rect key="frame" x="171" y="79" width="48" height="21"/>
@@ -210,9 +210,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="logoutButtonDidTouch:" destination="UTK-xh-K9h" eventType="touchUpInside" id="c9D-V0-f5r"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUd-t1-bnr">
                                         <rect key="frame" x="0.0" y="130" width="130" height="130"/>
@@ -221,9 +218,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="learnButtonDidTouch:" destination="UTK-xh-K9h" eventType="touchUpInside" id="5u1-Nv-CIl"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn iOS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLS-W2-E0t">
                                         <rect key="frame" x="31" y="209" width="68" height="21"/>
@@ -251,15 +245,6 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeDown"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNT-0a-GVP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeButtonDidTouch:" destination="UTK-xh-K9h" eventType="touchUpInside" id="Kej-A3-B0r"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -272,6 +257,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="tNT-0a-GVP" id="uj8-Yx-SFm"/>
                         <outlet property="dialogView" destination="com-I0-FOZ" id="7Am-Rx-72F"/>
                         <outlet property="learnButton" destination="MUd-t1-bnr" id="CY4-2u-4qb"/>
                         <outlet property="logoutButton" destination="rRr-ws-ZYB" id="NyF-G3-sun"/>
