@@ -10,6 +10,8 @@
 #import "StoryViewController.h"
 #import "StoryViewModel.h"
 #import "UIViewController+Storyboard.h"
+#import "StoryTableViewCell.h"
+#import "Story.h"
 
 SPEC_BEGIN(StoryViewControllerSpec)
 
@@ -38,7 +40,6 @@ describe(@"StoryViewController", ^{
             [controller.refreshControl.rac_command execute:nil];
         });
     });
-
 });
 
 SPEC_END

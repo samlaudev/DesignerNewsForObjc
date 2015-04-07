@@ -14,5 +14,6 @@
 @interface StoryClient : NSObject
 
 + (RACSubject*)storiesForSection:(NSString *)section page:(NSInteger)page;
++ (RACSubject*)upvoteStoryWithStoryId:(NSInteger)storyId token:(NSString *)token;
 
 @end

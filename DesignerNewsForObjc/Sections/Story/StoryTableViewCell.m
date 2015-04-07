@@ -11,6 +11,14 @@
 
 @implementation StoryTableViewCell
 
+- (void)awakeFromNib
+{
+    _upvoteButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * (id input) {
+        
+        return [RACSignal empty];
+    }];
+}
+
 - (void)configureCellForStory:(Story*)story
 {
     self.badgeImageView.image = story.badge;

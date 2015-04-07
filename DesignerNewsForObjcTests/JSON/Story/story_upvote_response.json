@@ -1,0 +1,193 @@
+{
+  "story": {
+    "id": 46826,
+    "title": "A Year of DuckDuckGo",
+    "comment": "",
+    "comment_html": null,
+    "comment_count": 11,
+    "vote_count": 32,
+    "created_at": "2015-03-28T14:05:38Z",
+    "pinned_at": null,
+    "url": "https://news.layervault.com/click/stories/46826",
+    "site_url": "https://api-news.layervault.com/stories/46826-a-year-of-duckduckgo",
+    "user_id": 3334,
+    "user_display_name": "Thomas W.",
+    "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/3334/original/portrait-2014-09-16_13_25_43__0000-333420140916-9599-7pse94.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944905&Signature=xQ85pmPG9sOoR%2FQrUcc0slwSY80%3D",
+    "hostname": "designwithtom.com",
+    "user_url": "http://news.layervault.com/u/3334/thomas-wood",
+    "badge": null,
+    "user_job": "Online Designer at IDG UK",
+    "sponsored": false,
+    "comments": [
+      {
+        "id": 142530,
+        "body": "Had no idea it had those customization settings — finally making the switch.",
+        "body_html": "<p>Had no idea it had those customization settings — finally making the switch.</p>\n",
+        "created_at": "2015-03-28T18:41:37Z",
+        "depth": 0,
+        "vote_count": 1,
+        "url": "https://api-news.layervault.com/comments/142530",
+        "user_url": "http://news.layervault.com/u/3826/matt-soria",
+        "user_id": 3826,
+        "user_display_name": "Matt S.",
+        "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/3826/original/portrait-2014-04-12_11_08_21__0000-382620140412-5896-1udai4f.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944905&Signature=LcqenIvNKWAMlVjKC8CeGcOaZ30%3D",
+        "user_job": "Web Dood @ mattsoria.com",
+        "comments": []
+      },
+      {
+        "id": 142533,
+        "body": "I've been using DDG for a few years, and the !bang feature is one of the most useful features of any other search engine I've used. Being able to search almost any other website instantly from one place is incredible.\r\n\r\nI can search Amazon (!a),  YouTube (!yt), StackOverflow (!so), Google Maps (!gm), and so many more with just a few key strokes. Even sites that I'm not 100% what the !bang is, I just take a shot in the dark and it's typically right (recent example is !e for Ebay).\r\n\r\nIntegrating it into your URL search bar (I use Firefox), you can basically search any site by just opening a new tab. It's an amazingly useful tool that I use numerous times throughout the day. ",
+        "body_html": "<p>I&#39;ve been using DDG for a few years, and the !bang feature is one of the most useful features of any other search engine I&#39;ve used. Being able to search almost any other website instantly from one place is incredible.</p>\n\n<p>I can search Amazon (!a),  YouTube (!yt), StackOverflow (!so), Google Maps (!gm), and so many more with just a few key strokes. Even sites that I&#39;m not 100% what the !bang is, I just take a shot in the dark and it&#39;s typically right (recent example is !e for Ebay).</p>\n\n<p>Integrating it into your URL search bar (I use Firefox), you can basically search any site by just opening a new tab. It&#39;s an amazingly useful tool that I use numerous times throughout the day. </p>\n",
+        "created_at": "2015-03-28T19:22:27Z",
+        "depth": 0,
+        "vote_count": 6,
+        "url": "https://api-news.layervault.com/comments/142533",
+        "user_url": "http://news.layervault.com/u/5443/matthew-h",
+        "user_id": 5443,
+        "user_display_name": "Matthew H.",
+        "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/5443/original/portrait-2014-06-07_19_04_17__0000-544320140607-8231-huf97u.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944905&Signature=knxVDuo30fVKpstwyHZSN5OXrRs%3D",
+        "user_job": "Kode",
+        "comments": [
+          {
+            "id": 142613,
+            "body": "Its just an incredible little feature - I almost feel they should make more of it in their marketing.\r\n\r\nI always liked that in Chrome you can begin typing the name of the site in the address bar, and as it autocompletes you can just press Tab and it allows you to search that domain from the address bar - its similar to !bangs but requires you to have visited the site before, and for Chrome to learn that the domain has a search function. \r\n\r\nIve been using TinEye for image search, but its not quite as good as Google Image search. Decent maps and an image search would make me abandon Google altogether.\r\n\r\nNext I need to ditch Chrome & Gmail.. Been trialling Zoho mail which seems pretty good so far (and its free).",
+            "body_html": "<p>Its just an incredible little feature - I almost feel they should make more of it in their marketing.</p>\n\n<p>I always liked that in Chrome you can begin typing the name of the site in the address bar, and as it autocompletes you can just press Tab and it allows you to search that domain from the address bar - its similar to !bangs but requires you to have visited the site before, and for Chrome to learn that the domain has a search function. </p>\n\n<p>Ive been using TinEye for image search, but its not quite as good as Google Image search. Decent maps and an image search would make me abandon Google altogether.</p>\n\n<p>Next I need to ditch Chrome &amp; Gmail.. Been trialling Zoho mail which seems pretty good so far (and its free).</p>\n",
+            "created_at": "2015-03-29T16:23:45Z",
+            "depth": 1,
+            "vote_count": 0,
+            "url": "https://api-news.layervault.com/comments/142613",
+            "user_url": "http://news.layervault.com/u/3334/thomas-wood",
+            "user_id": 3334,
+            "user_display_name": "Thomas W.",
+            "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/3334/original/portrait-2014-09-16_13_25_43__0000-333420140916-9599-7pse94.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944905&Signature=xQ85pmPG9sOoR%2FQrUcc0slwSY80%3D",
+            "user_job": "Online Designer at IDG UK",
+            "comments": []
+          },
+          {
+            "id": 142681,
+            "body": "You can search Iconfinder with the !icon bang.",
+            "body_html": "<p>You can search Iconfinder with the !icon bang.</p>\n",
+            "created_at": "2015-03-30T08:32:30Z",
+            "depth": 1,
+            "vote_count": 0,
+            "url": "https://api-news.layervault.com/comments/142681",
+            "user_url": "http://news.layervault.com/u/2480/martin-leblanc",
+            "user_id": 2480,
+            "user_display_name": "Martin L.",
+            "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/2480/original/portrait-2014-10-08_08_20_40__0000-248020141008-4779-11x2x3x.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944905&Signature=txOzpkxO3gBikN8%2BsHPqnugz8yI%3D",
+            "user_job": "Batman @ Iconfinder",
+            "comments": []
+          },
+          {
+            "id": 142697,
+            "body": "Browsers have had this feature for years. You don't need to be a DDG user to search sites from the address bar.\r\n\r\nIn Firefox you simply right click any search field on a site and choose \"Add a keyword for this search\".\r\n\r\nIn Chrome you have access to the same feature via Options > Manage search engines.\r\n\r\nI have a ton of these set up, like *w* for searching Wikipedia, *r* for going directly to a subreddit, *d* for a dictionary site etc. Can't imagine browsing without these shortcuts.\r\n\r\nThe only benefit that DDG seems to provide is that it sets up the keywords for you, which can be useful I suppose.",
+            "body_html": "<p>Browsers have had this feature for years. You don&#39;t need to be a DDG user to search sites from the address bar.</p>\n\n<p>In Firefox you simply right click any search field on a site and choose &quot;Add a keyword for this search&quot;.</p>\n\n<p>In Chrome you have access to the same feature via Options &gt; Manage search engines.</p>\n\n<p>I have a ton of these set up, like <em>w</em> for searching Wikipedia, <em>r</em> for going directly to a subreddit, <em>d</em> for a dictionary site etc. Can&#39;t imagine browsing without these shortcuts.</p>\n\n<p>The only benefit that DDG seems to provide is that it sets up the keywords for you, which can be useful I suppose.</p>\n",
+            "created_at": "2015-03-30T11:16:34Z",
+            "depth": 1,
+            "vote_count": 0,
+            "url": "https://api-news.layervault.com/comments/142697",
+            "user_url": "http://news.layervault.com/u/3847/jonathan-svrdn",
+            "user_id": 3847,
+            "user_display_name": "Jonathan S.",
+            "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/3847/original/portrait-2014-12-03_09_04_14__0000-384720141203-30724-m69zow.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944905&Signature=1W60zW6tD1%2FCZv3%2FdgHYwjl0u0Q%3D",
+            "user_job": "developer",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "id": 142536,
+        "body": "Weird, html snippets don't show up for me.\r\n\r\nAlso, I would switch to DDG if they would do a better job at current news related to a search. With Google, I often search for a topic (like a movie, band, device, etc.) and then click the news tab which serves as an aggregate for current news. On DDG, only a few searches show up with the news tab.",
+        "body_html": "<p>Weird, html snippets don&#39;t show up for me.</p>\n\n<p>Also, I would switch to DDG if they would do a better job at current news related to a search. With Google, I often search for a topic (like a movie, band, device, etc.) and then click the news tab which serves as an aggregate for current news. On DDG, only a few searches show up with the news tab.</p>\n",
+        "created_at": "2015-03-28T20:13:20Z",
+        "depth": 0,
+        "vote_count": 2,
+        "url": "https://api-news.layervault.com/comments/142536",
+        "user_url": "http://news.layervault.com/u/7183/ted-mcdonald",
+        "user_id": 7183,
+        "user_display_name": "Ted M.",
+        "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/7183/original/portrait-2014-09-15_23_02_33__0000-718320140915-9599-1gbstit.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944905&Signature=%2FJHKR6cKE%2F%2FuhyO6ppAR%2BZkU3S4%3D",
+        "user_job": "Designer",
+        "comments": [
+          {
+            "id": 142556,
+            "body": "!g is your friend.\r\n\r\n!gi is handy as well.",
+            "body_html": "<p>!g is your friend.</p>\n\n<p>!gi is handy as well.</p>\n",
+            "created_at": "2015-03-28T23:42:48Z",
+            "depth": 1,
+            "vote_count": 2,
+            "url": "https://api-news.layervault.com/comments/142556",
+            "user_url": "http://news.layervault.com/u/305/marc-edwards",
+            "user_id": 305,
+            "user_display_name": "Marc E.",
+            "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/305/original/portrait-2014-09-23_01_14_03__0000-30520140923-9881-oso88p.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944905&Signature=bIHtydA8rMoyT14c81sO6XRZC5E%3D",
+            "user_job": "Founder at Bjango",
+            "comments": [
+              {
+                "id": 142571,
+                "body": ">!gi is handy as well.\r\n\r\nOr just !i (!)",
+                "body_html": "<blockquote>\n<p>!gi is handy as well.</p>\n</blockquote>\n\n<p>Or just !i (!)</p>\n",
+                "created_at": "2015-03-29T06:02:45Z",
+                "depth": 2,
+                "vote_count": 1,
+                "url": "https://api-news.layervault.com/comments/142571",
+                "user_url": "http://news.layervault.com/u/327/matt-kelsh",
+                "user_id": 327,
+                "user_display_name": "Matt K.",
+                "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/327/original/portrait-2015-03-27_01_29_53__0000-32720150327-26264-u3b0rb.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944905&Signature=PtIATbCc5W0oXkOrAU6c5UsDDEI%3D",
+                "user_job": "Handsome Designer",
+                "comments": [
+                  {
+                    "id": 142585,
+                    "body": "You have just saved me so much typing!\r\n\r\nI love that they have them aliased like that. Just checked and !googleimages also works.",
+                    "body_html": "<p>You have just saved me so much typing!</p>\n\n<p>I love that they have them aliased like that. Just checked and !googleimages also works.</p>\n",
+                    "created_at": "2015-03-29T09:56:22Z",
+                    "depth": 3,
+                    "vote_count": 0,
+                    "url": "https://api-news.layervault.com/comments/142585",
+                    "user_url": "http://news.layervault.com/u/305/marc-edwards",
+                    "user_id": 305,
+                    "user_display_name": "Marc E.",
+                    "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/305/original/portrait-2014-09-23_01_14_03__0000-30520140923-9881-oso88p.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944905&Signature=bIHtydA8rMoyT14c81sO6XRZC5E%3D",
+                    "user_job": "Founder at Bjango",
+                    "comments": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 142575,
+            "body": "https://duckduckgo.com/bang.html",
+            "body_html": "<p><a href=\"https://duckduckgo.com/bang.html\" rel=\"nofollow\">https://duckduckgo.com/bang.html</a></p>\n",
+            "created_at": "2015-03-29T07:09:40Z",
+            "depth": 1,
+            "vote_count": 0,
+            "url": "https://api-news.layervault.com/comments/142575",
+            "user_url": "http://news.layervault.com/u/7697/abe-yang",
+            "user_id": 7697,
+            "user_display_name": "Abe Y.",
+            "user_portrait_url": null,
+            "user_job": "UX Designer",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "id": 142635,
+        "body": "I had no idea there existed a search engine that could be so versatile and customizable. \n\nRead this and immediately switched to DDG on os x and iOS",
+        "body_html": "<p>I had no idea there existed a search engine that could be so versatile and customizable. </p>\n\n<p>Read this and immediately switched to DDG on os x and iOS</p>\n",
+        "created_at": "2015-03-29T21:47:19Z",
+        "depth": 0,
+        "vote_count": 2,
+        "url": "https://api-news.layervault.com/comments/142635",
+        "user_url": "http://news.layervault.com/u/7779/thibault-maekelbergh",
+        "user_id": 7779,
+        "user_display_name": "Thibault M.",
+        "user_portrait_url": "https://designer-news.s3.amazonaws.com/rendered_portraits/7779/original/portrait-2014-06-07_10_27_44__0000-777920140607-7792-cn0xj6.png?AWSAccessKeyId=AKIAI4OKHYH7JRMFZMUA&Expires=1459944906&Signature=SHYcvq9OVThJafj0GcMPWDDoANE%3D",
+        "user_job": "Deviner",
+        "comments": []
+      }
+    ]
+  }
+}

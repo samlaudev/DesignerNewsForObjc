@@ -1,0 +1,19 @@
+[
+  {
+    "request" :
+      {
+        "uri" : "/api/v1/stories/46826/upvote",
+        "method" : "post",
+        "headers" : 
+      	  {
+            "Authorization" : "Bearer 4422ea7f05750e93a101cb77ff76dffd3d65d46ebf6ed5b94d211e5d9b3b80bc"
+      	  } 
+      },
+    "response" :
+      {
+        "file" : "./Story/story_upvote_response.json"
+      }
+  }
+]
+
+

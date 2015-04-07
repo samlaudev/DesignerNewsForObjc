@@ -8,6 +8,7 @@
 
 #import <Kiwi/Kiwi.h>
 #import "StoryClient.h"
+#import "LocalStore.h"
 
 SPEC_BEGIN(StoryClientSpec)
 
@@ -22,6 +23,21 @@ describe(@"StoryClient", ^{
                 fecthData = x;
             } completed:^{
                 [[fecthData shouldNot] beNil];
+            }];
+        });
+    });
+    
+    context(@"when upvote story with id", ^{
+        it(@"should upvote story successfully", ^{
+            __block id result;
+            
+            RACSignal *signal = [StoryClient upvoteStoryWithStoryId:46826 token:@"4422ea7f05750e93a101cb77ff76dffd3d65d46ebf6ed5b94d211e5d9b3b80bc"];
+            [signal subscribeNext:^(id x) {
+                result = x;
+            } error:^(NSError *error) {
+                [[theValue([result boolValue]) should] beYes];
+            } completed:^{
+                [[theValue([result boolValue]) should] beYes];
             }];
         });
     });

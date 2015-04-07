@@ -31,4 +31,20 @@
     return signal;
 }
 
++ (RACSubject*)upvoteStoryWithStoryId:(NSInteger)storyId token:(NSString*)token
+{
+    RACSubject* signal = [RACSubject subject];
+
+    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@", token] forHTTPHeaderField:@"Authorization"];
+    [manager POST:[DesignerNewsURL storyUpvoteWithId:storyId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [signal sendNext:@YES];
+        [signal sendCompleted];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [signal sendError:error];
+    }];
+
+    return signal;
+}
+
 @end

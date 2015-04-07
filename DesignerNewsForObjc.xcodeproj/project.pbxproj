@@ -45,6 +45,8 @@
 		1AABBFD11AD26C0900FC86A7 /* LocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABBFD01AD26C0900FC86A7 /* LocalStore.m */; };
 		1AABBFD41AD26C9C00FC86A7 /* LocalStoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABBFD31AD26C9C00FC86A7 /* LocalStoreSpec.m */; };
 		1AD915781AC3156100B6F6A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD915771AC3156100B6F6A2 /* AppDelegate.m */; };
+		1AE4DDF81AD3AE7800DA7CFB /* story_upvote_conf.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AE4DDF71AD3AE7800DA7CFB /* story_upvote_conf.json */; };
+		1AE4DDFA1AD3AE9800DA7CFB /* story_upvote_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AE4DDF91AD3AE9800DA7CFB /* story_upvote_response.json */; };
 		1AE61D341ACCD6AF00A84B96 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61D331ACCD6AF00A84B96 /* LoginViewModel.m */; };
 		1AE61D361ACCDB2600A84B96 /* LoginViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61D351ACCDB2600A84B96 /* LoginViewModelSpec.m */; };
 		1AE61D391ACCE1FF00A84B96 /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE61D381ACCE1FF00A84B96 /* NSString+Check.m */; };
@@ -151,6 +153,8 @@
 		1AABBFD31AD26C9C00FC86A7 /* LocalStoreSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalStoreSpec.m; sourceTree = "<group>"; };
 		1AD915761AC3156100B6F6A2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1AD915771AC3156100B6F6A2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1AE4DDF71AD3AE7800DA7CFB /* story_upvote_conf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story_upvote_conf.json; sourceTree = "<group>"; };
+		1AE4DDF91AD3AE9800DA7CFB /* story_upvote_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story_upvote_response.json; sourceTree = "<group>"; };
 		1AE61D321ACCD6AF00A84B96 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		1AE61D331ACCD6AF00A84B96 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		1AE61D351ACCDB2600A84B96 /* LoginViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModelSpec.m; sourceTree = "<group>"; };
@@ -470,6 +474,8 @@
 			children = (
 				1A5807E81AC7A708006F64D0 /* stories_response.json */,
 				1A5807E91AC7A708006F64D0 /* stories_conf.json */,
+				1AE4DDF71AD3AE7800DA7CFB /* story_upvote_conf.json */,
+				1AE4DDF91AD3AE9800DA7CFB /* story_upvote_response.json */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -771,6 +777,8 @@
 			files = (
 				1A289ED01ACE68AB006BC750 /* login_conf.json in Resources */,
 				1A5807EA1AC7A708006F64D0 /* stories_response.json in Resources */,
+				1AE4DDF81AD3AE7800DA7CFB /* story_upvote_conf.json in Resources */,
+				1AE4DDFA1AD3AE9800DA7CFB /* story_upvote_response.json in Resources */,
 				1A289ED11ACE68AB006BC750 /* login_response.json in Resources */,
 				1A5807EB1AC7A708006F64D0 /* stories_conf.json in Resources */,
 			);

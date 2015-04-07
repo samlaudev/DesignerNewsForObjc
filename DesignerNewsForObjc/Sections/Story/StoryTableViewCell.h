@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Story.h"
+#import <ReactiveCocoa.h>
 
 @class SpringButton;
 @class AsyncImageView;

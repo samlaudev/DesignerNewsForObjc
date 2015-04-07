@@ -4,5 +4,8 @@
     },
     {
         "include" : "./Login/login_conf.json"
+    },
+    {
+        "include" : "./Story/story_upvote_conf.json"
     }
 ]
