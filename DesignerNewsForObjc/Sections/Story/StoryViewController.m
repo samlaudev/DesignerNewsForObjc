@@ -15,6 +15,7 @@
 @interface StoryViewController () <MenuViewControllerDelegate>
 
 @property (strong, nonatomic) StoryViewModel* viewModel;
+@property (strong, nonatomic) RACCommand* refreshControlCommand;
 
 @end
 
@@ -30,6 +31,23 @@
     }
 
     return _viewModel;
+}
+
+- (RACCommand*)refreshControlCommand
+{
+    if (!_refreshControlCommand) {
+        _refreshControlCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * (id input) {
+            NSString *section = [self.navigationItem.title isEqualToString:@""] ? @"" : @"recent";
+            [[self.viewModel loadStoriesForSection:section page:1] subscribeNext:^(id x) {
+                [self.refreshControl endRefreshing];
+                [self.tableView reloadData];
+            }];
+            
+            return [RACSignal empty];
+        }];
+    }
+
+    return _refreshControlCommand;
 }
 
 #pragma mark - View controller lifecycle
@@ -50,6 +68,8 @@
             [self.view hideLoading];
         }
     }];
+    // when user pull down, refresh story
+    self.refreshControl.rac_command = self.refreshControlCommand;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -64,8 +84,9 @@
     if ([segue.identifier isEqualToString:@"MenuSegue"]) {
         MenuViewController* destViewController = (MenuViewController*)segue.destinationViewController;
         destViewController.delegate = self;
-    }else if ([segue.identifier isEqualToString:@"LoginSegue"]) {
-        LoginViewController *destViewController = (LoginViewController*)segue.destinationViewController;
+    }
+    else if ([segue.identifier isEqualToString:@"LoginSegue"]) {
+        LoginViewController* destViewController = (LoginViewController*)segue.destinationViewController;
         destViewController.reloadStoryBlock = ^() {
             [self fetchStoriesForSection:@"" title:@"Top Stories"];
             self.loginBarButton.enabled = NO;
@@ -90,7 +111,7 @@
     [self fetchStoriesForSection:@"recent" title:@"Recent Stories"];
 }
 
-- (void)menuViewControllerDidTouchLogout:(MenuViewController *)controller
+- (void)menuViewControllerDidTouchLogout:(MenuViewController*)controller
 {
     self.loginBarButton.enabled = YES;
 }

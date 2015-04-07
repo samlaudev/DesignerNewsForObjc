@@ -9,6 +9,7 @@
 #import <Kiwi/Kiwi.h>
 #import "StoryViewController.h"
 #import "StoryViewModel.h"
+#import "UIViewController+Storyboard.h"
 
 SPEC_BEGIN(StoryViewControllerSpec)
 
@@ -17,7 +18,8 @@ describe(@"StoryViewController", ^{
     __block StoryViewController *controller = nil;
     
     beforeEach(^{
-        controller = [[StoryViewController alloc] init];
+        controller = [StoryViewController loadViewControllerWithIdentifierForMainStoryboard:@"StoryViewController"];
+        [controller view];
     });
     
     afterEach(^{
@@ -25,14 +27,15 @@ describe(@"StoryViewController", ^{
     });
 
     context(@"when load view", ^{
-        __block UIView *view = nil;
-        
-        beforeEach(^{
-            view = controller.view;
-        });
-        
         it(@"should have data source that equal table view data source", ^{
             [[controller.viewModel.dataSource should] equal:controller.tableView.dataSource];
+        });
+    });
+    
+    context(@"when user pull down", ^{
+        it(@"should fetch stories", ^{
+            [[controller.viewModel should] receive:@selector(loadStoriesForSection:page:)];
+            [controller.refreshControl.rac_command execute:nil];
         });
     });
 
