@@ -11,8 +11,9 @@
 #import "MenuViewController.h"
 #import "DesignerNewsForObjc-Swift.h"
 #import "LoginViewController.h"
+#import "LocalStore.h"
 
-@interface StoryViewController () <MenuViewControllerDelegate>
+@interface StoryViewController () <MenuViewControllerDelegate, StoryTableViewCellDelegate>
 
 @property (strong, nonatomic) StoryViewModel* viewModel;
 @property (strong, nonatomic) RACCommand* refreshControlCommand;
@@ -26,6 +27,7 @@
 {
     if (!_viewModel) {
         _viewModel = [[StoryViewModel alloc] initWithCellIdentifier:@"StoryCell" configureCellBlock:^(StoryTableViewCell* cell, Story* item) {
+            cell.delegate = self;
             [cell configureCellForStory:item];
         }];
     }
@@ -98,6 +100,30 @@
 - (IBAction)menuButtonDidTouch:(id)sender
 {
     [self performSegueWithIdentifier:@"MenuSegue" sender:self];
+}
+
+#pragma mark - StoryTableViewCell delegate
+- (void)storyTableViewCellDidTouchUpvoteWithCell:(StoryTableViewCell*)cell sender:(SpringButton*)sender
+{
+    if ([LocalStore isHasLogin]) { // user has login
+        NSInteger row = [self.tableView indexPathForCell:cell].row;
+        Story* story = self.viewModel.storiesArray[row];
+        // animate button
+        if (![LocalStore isUpvoteStory:story.storyId]) {
+            [sender animate];
+        }
+        // upvote story with id
+        [[StoryClient upvoteStoryWithStoryId:story.storyId token:[LocalStore getToken]] subscribeNext:^(id x){
+
+        }];
+        // save story id
+        [LocalStore saveUpvoteStory:story.storyId];
+        // update story cell
+        [cell configureCellForStory:story];
+    }
+    else { // user hasn't login yet;
+        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+    }
 }
 
 #pragma mark - MenuViewController delegate

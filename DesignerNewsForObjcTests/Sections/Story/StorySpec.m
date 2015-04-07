@@ -23,6 +23,7 @@ describe(@"Story", ^{
        
        it(@"should match some properties", ^{
            Story *story = storys[0];
+           [[theValue(story.storyId) should] equal:theValue(46826)];
            [[theValue(story.commentCount) should] equal:theValue(4)];
            [[theValue(story.upvoteCount) should] equal:theValue(17)];
        });

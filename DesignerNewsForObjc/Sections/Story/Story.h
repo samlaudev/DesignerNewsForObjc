@@ -11,6 +11,7 @@
 
 @interface Story : MTLModel <MTLJSONSerializing>
 
+@property (assign, nonatomic) NSInteger storyId;
 @property (strong, nonatomic) UIImage* badge;
 @property (strong, nonatomic) NSString* title;
 @property (strong, nonatomic) NSString* time;

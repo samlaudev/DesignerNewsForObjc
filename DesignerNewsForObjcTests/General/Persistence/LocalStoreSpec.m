@@ -31,6 +31,14 @@ describe(@"LocalStore", ^{
             [[[LocalStore getToken] should] beNil];
         });
     });
+    
+    context(@"when save story upvote id", ^{
+        it(@"should has upvoted", ^{
+            [LocalStore saveUpvoteStory:12345];
+            
+            [[theValue([LocalStore isUpvoteStory:12345]) should] beYes];
+        });
+    });
 
 });
 

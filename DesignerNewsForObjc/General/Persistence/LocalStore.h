@@ -14,5 +14,7 @@
 + (void)removeToken;
 + (NSString *)getToken;
 + (BOOL)isHasLogin;
++ (void)saveUpvoteStory:(NSInteger)storyId;
++ (BOOL)isUpvoteStory:(NSInteger)storyId;
 
 @end

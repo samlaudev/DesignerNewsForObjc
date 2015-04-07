@@ -10,6 +10,14 @@
 #import "Story.h"
 #import <ReactiveCocoa.h>
 
+@class StoryTableViewCell;
+
+@protocol StoryTableViewCellDelegate <NSObject>
+
+- (void)storyTableViewCellDidTouchUpvoteWithCell:(StoryTableViewCell*)cell sender:(id)sender;
+
+@end
+
 @class SpringButton;
 @class AsyncImageView;
 
@@ -23,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UILabel* authorLabel;
 @property (weak, nonatomic) IBOutlet SpringButton* upvoteButton;
 @property (weak, nonatomic) IBOutlet SpringButton* commentButton;
+@property (weak, nonatomic) id <StoryTableViewCellDelegate> delegate;
 
 // Configure methods
 - (void)configureCellForStory:(Story*)story;

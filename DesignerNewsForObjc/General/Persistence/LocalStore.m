@@ -7,6 +7,7 @@
 //
 
 #import "LocalStore.h"
+#import <ReactiveCocoa.h>
 
 NSString* const tokenKey = @"tokenKey";
 
@@ -16,6 +17,7 @@ NSString* const tokenKey = @"tokenKey";
 
 @implementation LocalStore
 
+#pragma mark - Operate token
 + (void)saveToken:(NSString*)token
 {
     [[NSUserDefaults standardUserDefaults] setValue:token forKey:tokenKey];
@@ -34,6 +36,22 @@ NSString* const tokenKey = @"tokenKey";
 + (void)removeToken
 {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:tokenKey];
+}
+
+#pragma mark - Operate upvote
++ (void)saveUpvoteStory:(NSInteger)storyId
+{
+    NSArray* array = [[NSUserDefaults standardUserDefaults] arrayForKey:@"upvoteStoriesKey"] ? [[NSUserDefaults standardUserDefaults] arrayForKey:@"upvoteStoriesKey"]: @[];
+    if (![array containsObject:@(storyId)]) {
+        NSArray* concatenated = [[array.rac_sequence concat:@[ @(storyId) ].rac_sequence] array];
+        [[NSUserDefaults standardUserDefaults] setObject:concatenated forKey:@"upvoteStoriesKey"];
+    }
+}
+
++ (BOOL)isUpvoteStory:(NSInteger)storyId
+{
+    NSArray* array = [[NSUserDefaults standardUserDefaults] arrayForKey:@"upvoteStoriesKey"];
+    return [array containsObject:@(storyId)];
 }
 
 @end

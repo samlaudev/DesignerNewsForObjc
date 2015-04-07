@@ -15,6 +15,7 @@
 + (NSDictionary*)JSONKeyPathsByPropertyKey
 {
     return @{
+        @"storyId" : @"id",
         @"badge" : @"badge",
         @"title" : @"title",
         @"time" : @"created_at",
