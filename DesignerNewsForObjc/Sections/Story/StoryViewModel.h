@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic, readonly) ArrayDataSource* dataSource;
 @property (strong, nonatomic, readonly) NSArray* storiesArray;
+@property (assign, nonatomic) BOOL isFirstLogin;
 
 - (RACSignal*)loadStoriesForSection:(NSString*)section page:(NSInteger)page;
 

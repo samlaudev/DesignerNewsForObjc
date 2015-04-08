@@ -15,6 +15,7 @@
 @protocol StoryTableViewCellDelegate <NSObject>
 
 - (void)storyTableViewCellDidTouchUpvoteWithCell:(StoryTableViewCell*)cell sender:(id)sender;
+- (void)storyTableViewCellDidTouchCommentWithCell:(StoryTableViewCell*)cell sender:(id)sender;
 
 @end
 

@@ -20,6 +20,12 @@
         
         return [RACSignal empty];
     }];
+
+    _commentButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * (id input) {
+        [self.delegate storyTableViewCellDidTouchCommentWithCell:self sender:_commentButton];
+
+        return [RACSignal empty];
+    }];
 }
 
 - (void)configureCellForStory:(Story*)story
@@ -35,7 +41,8 @@
     if ([LocalStore isUpvoteStory:story.storyId]) {
         [self.upvoteButton setImage:[UIImage imageNamed:@"icon-upvote-active"] forState:UIControlStateNormal];
         [self.upvoteButton setTitle:[NSString stringWithFormat:@"%ld", story.upvoteCount + 1] forState:UIControlStateNormal];
-    }else {
+    }
+    else {
         [self.upvoteButton setImage:[UIImage imageNamed:@"icon-upvote"] forState:UIControlStateNormal];
         [self.upvoteButton setTitle:[NSString stringWithFormat:@"%ld", story.upvoteCount] forState:UIControlStateNormal];
     }

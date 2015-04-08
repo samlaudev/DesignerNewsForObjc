@@ -30,6 +30,7 @@
             cell.delegate = self;
             [cell configureCellForStory:item];
         }];
+        _viewModel.isFirstLogin = YES;
     }
 
     return _viewModel;
@@ -80,7 +81,14 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    self.viewModel.active = YES;
+
+    if (self.viewModel.isFirstLogin) {
+        self.viewModel.active = YES;
+        self.viewModel.isFirstLogin = NO;
+    }else {
+        self.viewModel.active = NO;
+    }
+    
 }
 
 #pragma mark - Prepare for segue
@@ -127,6 +135,11 @@
     else { // user hasn't login yet;
         [self performSegueWithIdentifier:@"LoginSegue" sender:self];
     }
+}
+
+- (void)storyTableViewCellDidTouchCommentWithCell:(StoryTableViewCell*)cell sender:(id)sender
+{
+    [self performSegueWithIdentifier:@"CommentSegue" sender:self];
 }
 
 #pragma mark - MenuViewController delegate
