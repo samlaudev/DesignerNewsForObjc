@@ -56,6 +56,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // dynamic height for cell
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 100;
     // setup table view data source
     self.tableView.dataSource = self.viewModel.dataSource;
     // observe view model's stories property, when it update, table view should reload data
