@@ -562,10 +562,10 @@
             </objects>
             <point key="canvasLocation" x="1058" y="338"/>
         </scene>
-        <!--Table View Controller-->
+        <!--W-->
         <scene sceneID="uqn-zI-bnP">
             <objects>
-                <tableViewController id="sOK-Tx-XTI" sceneMemberID="viewController">
+                <tableViewController id="sOK-Tx-XTI" customClass="w" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" id="6qg-Dl-xEd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
