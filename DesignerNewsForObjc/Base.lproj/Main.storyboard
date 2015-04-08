@@ -270,6 +270,86 @@
             </objects>
             <point key="canvasLocation" x="654" y="1052"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="veh-0m-g3q">
+            <objects>
+                <viewController id="Doo-9s-kJf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rj7-wz-Vsq"/>
+                        <viewControllerLayoutGuide type="bottom" id="noa-V3-Dwd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zPM-M0-faV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNa-zU-nw9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4t6-2y-qid" customClass="DesignableButton" customModule="DesignerNewsForObjc" customModuleProvider="target">
+                                <rect key="frame" x="20" y="504" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.61176470589999998" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Ui0-VX-3Uh"/>
+                                    <constraint firstAttribute="height" constant="44" id="sZI-Gf-U1o"/>
+                                </constraints>
+                                <state key="normal" image="icon-close">
+                                    <color key="titleShadowColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="VLY-eJ-YMf" kind="unwind" unwindAction="unwindToViewController:" id="68R-E7-yom"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-hY-sQQ" customClass="DesignableButton" customModule="DesignerNewsForObjc" customModuleProvider="target">
+                                <rect key="frame" x="84" y="504" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="MT1-LV-zwm"/>
+                                    <constraint firstAttribute="height" constant="44" id="j2o-Z4-ttr"/>
+                                </constraints>
+                                <state key="normal" image="action-share">
+                                    <color key="titleShadowColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="pqY-rw-DE6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Nu6-Qp-FUI"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.2196078431372549" green="0.73333333333333328" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pqY-rw-DE6" firstAttribute="top" secondItem="zPM-M0-faV" secondAttribute="top" id="HIi-f2-o2h"/>
+                            <constraint firstItem="noa-V3-Dwd" firstAttribute="top" secondItem="4t6-2y-qid" secondAttribute="bottom" constant="20" id="hfR-vQ-hEe"/>
+                            <constraint firstItem="noa-V3-Dwd" firstAttribute="top" secondItem="gNa-zU-nw9" secondAttribute="bottom" id="o5Z-vb-KLQ"/>
+                            <constraint firstItem="jJg-hY-sQQ" firstAttribute="centerY" secondItem="4t6-2y-qid" secondAttribute="centerY" id="rag-N5-jvB"/>
+                            <constraint firstAttribute="trailing" secondItem="pqY-rw-DE6" secondAttribute="trailing" id="swg-gr-Kss"/>
+                            <constraint firstItem="jJg-hY-sQQ" firstAttribute="leading" secondItem="4t6-2y-qid" secondAttribute="trailing" constant="20" id="vek-3Y-dcs"/>
+                            <constraint firstItem="4t6-2y-qid" firstAttribute="leading" secondItem="zPM-M0-faV" secondAttribute="leading" constant="20" id="vnf-lc-CRL"/>
+                            <constraint firstItem="pqY-rw-DE6" firstAttribute="leading" secondItem="zPM-M0-faV" secondAttribute="leading" id="vrb-en-WON"/>
+                            <constraint firstItem="gNa-zU-nw9" firstAttribute="leading" secondItem="zPM-M0-faV" secondAttribute="leading" id="wdR-IS-tcH"/>
+                            <constraint firstAttribute="trailing" secondItem="gNa-zU-nw9" secondAttribute="trailing" id="yeV-T5-d6H"/>
+                            <constraint firstItem="gNa-zU-nw9" firstAttribute="top" secondItem="zPM-M0-faV" secondAttribute="top" id="zxo-0F-9rD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7a-lv-Hs5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="VLY-eJ-YMf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="1052"/>
+        </scene>
         <!--Learn View Controller-->
         <scene sceneID="dWz-dP-pbh">
             <objects>
@@ -527,6 +607,7 @@
                                     <outlet property="titleLabel" destination="5OJ-ah-BCc" id="9vQ-sl-ZD2"/>
                                     <outlet property="upvoteButton" destination="aZE-dv-39z" id="x5z-j4-mRu"/>
                                     <outlet property="userAvatarImageView" destination="Xxh-Pl-FuU" id="Z6Y-Bi-62U"/>
+                                    <segue destination="Doo-9s-kJf" kind="presentation" identifier="WebSegue" id="4p2-JX-aF5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -778,12 +859,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="action-share" width="19" height="27"/>
         <image name="bg-credits" width="280" height="140"/>
         <image name="big-credits" width="47" height="44"/>
         <image name="big-login" width="38" height="38"/>
         <image name="big-recent" width="36" height="36"/>
         <image name="big-top" width="41" height="39"/>
         <image name="icon-book" width="125" height="122"/>
+        <image name="icon-close" width="19" height="19"/>
         <image name="icon-comment" width="17" height="15"/>
         <image name="icon-hamburger" width="22" height="16"/>
         <image name="icon-mail" width="26" height="18"/>
