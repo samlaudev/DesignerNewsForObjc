@@ -13,6 +13,7 @@
 @property (nonatomic, copy) NSString* cellIdentifier;
 @property (nonatomic, copy) TableViewCellConfigureBlock configureCellBlock;
 @property (nonatomic, copy) TableViewCellConfigureCellIdentifier configureCellIdentifierBlock;
+@property (nonatomic, copy) TableViewArrayCountBlock arrayCountBlock;
 
 @end
 
@@ -27,20 +28,11 @@
         cellIdentifier:(NSString*)aCellIdentifier
     configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock
 {
-    return [self initWithItems:anItems cellIdentifier:aCellIdentifier configureCellBlock:aConfigureCellBlock configureCellIdentifierBlock:nil];
-}
-
-- (id)initWithItems:(NSArray*)anItems
-                  cellIdentifier:(NSString*)aCellIdentifier
-              configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock
-    configureCellIdentifierBlock:(TableViewCellConfigureCellIdentifier)aConfigureCellIdentifierBlock
-{
     self = [super init];
     if (self) {
         self.items = anItems;
         self.cellIdentifier = aCellIdentifier;
         self.configureCellBlock = [aConfigureCellBlock copy];
-        self.configureCellIdentifierBlock = [aConfigureCellIdentifierBlock copy];
     }
     return self;
 }
@@ -59,7 +51,6 @@
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    self.cellIdentifier = self.configureCellIdentifierBlock != nil ? self.configureCellIdentifierBlock(indexPath) : self.cellIdentifier;
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier
                                                             forIndexPath:indexPath];
     id item = [self itemAtIndexPath:indexPath];

@@ -11,7 +11,9 @@
 #import "MenuViewController.h"
 #import "DesignerNewsForObjc-Swift.h"
 #import "LoginViewController.h"
+#import "CommentViewController.h"
 #import "LocalStore.h"
+#import "CommentViewModel.h"
 
 @interface StoryViewController () <MenuViewControllerDelegate, StoryTableViewCellDelegate>
 
@@ -85,10 +87,10 @@
     if (self.viewModel.isFirstLogin) {
         self.viewModel.active = YES;
         self.viewModel.isFirstLogin = NO;
-    }else {
+    }
+    else {
         self.viewModel.active = NO;
     }
-    
 }
 
 #pragma mark - Prepare for segue
@@ -104,6 +106,11 @@
             [self fetchStoriesForSection:@"" title:@"Top Stories"];
             self.loginBarButton.enabled = NO;
         };
+    }
+    else if ([segue.identifier isEqualToString:@"CommentSegue"]) {
+        CommentViewController* destViewController = (CommentViewController*)segue.destinationViewController;
+        NSInteger row = [self.tableView indexPathForCell:sender].row;
+        [destViewController setViewModelWithStory:self.viewModel.storiesArray[row]];
     }
 }
 
@@ -139,7 +146,7 @@
 
 - (void)storyTableViewCellDidTouchCommentWithCell:(StoryTableViewCell*)cell sender:(id)sender
 {
-    [self performSegueWithIdentifier:@"CommentSegue" sender:self];
+    [self performSegueWithIdentifier:@"CommentSegue" sender:cell];
 }
 
 #pragma mark - MenuViewController delegate

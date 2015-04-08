@@ -21,6 +21,7 @@
 
 @class SpringButton;
 @class AsyncImageView;
+@class AutoTextView;
 
 @interface StoryTableViewCell : UITableViewCell
 
@@ -32,6 +33,8 @@
 @property (weak, nonatomic) IBOutlet UILabel* authorLabel;
 @property (weak, nonatomic) IBOutlet SpringButton* upvoteButton;
 @property (weak, nonatomic) IBOutlet SpringButton* commentButton;
+@property (weak, nonatomic) IBOutlet AutoTextView *commentTextView;
+
 @property (weak, nonatomic) id <StoryTableViewCellDelegate> delegate;
 
 // Configure methods

@@ -37,6 +37,9 @@
     self.authorLabel.text = story.author;
     [self.upvoteButton setTitle:[NSString stringWithFormat:@"%ld", story.upvoteCount] forState:UIControlStateNormal];
     [self.commentButton setTitle:[NSString stringWithFormat:@"%ld", story.commentCount] forState:UIControlStateNormal];
+    if (self.commentTextView) {
+        self.commentTextView.text = story.comment;
+    }
 
     if ([LocalStore isUpvoteStory:story.storyId]) {
         [self.upvoteButton setImage:[UIImage imageNamed:@"icon-upvote-active"] forState:UIControlStateNormal];

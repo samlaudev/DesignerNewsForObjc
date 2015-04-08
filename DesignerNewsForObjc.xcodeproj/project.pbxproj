@@ -39,6 +39,9 @@
 		1A6B8E401AC93AB80021CDE4 /* UIButton+Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E3C1AC93AB80021CDE4 /* UIButton+Specs.m */; };
 		1A6B8E411AC93AB80021CDE4 /* UIView+Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E3E1AC93AB80021CDE4 /* UIView+Specs.m */; };
 		1A6B8E431AC93B4C0021CDE4 /* MenuViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B8E421AC93B4C0021CDE4 /* MenuViewControllerSpec.m */; };
+		1A70CC571AD4F7B30085796C /* CommentViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A70CC561AD4F7B30085796C /* CommentViewControllerSpec.m */; };
+		1A70CC5A1AD4FC4B0085796C /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A70CC591AD4FC4B0085796C /* CommentTableViewCell.m */; };
+		1A70CC5D1AD5096B0085796C /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A70CC5C1AD5096B0085796C /* Comment.m */; };
 		1A74A5B81AD4D48600D0815B /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74A5B71AD4D48600D0815B /* CommentViewController.m */; };
 		1A74A5BB1AD4D56500D0815B /* CommentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74A5BA1AD4D56500D0815B /* CommentViewModel.m */; };
 		1A9D3A821AC6E4E800296A0C /* StoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D3A811AC6E4E800296A0C /* StoryViewModel.m */; };
@@ -144,6 +147,11 @@
 		1A6B8E3D1AC93AB80021CDE4 /* UIView+Specs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Specs.h"; sourceTree = "<group>"; };
 		1A6B8E3E1AC93AB80021CDE4 /* UIView+Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Specs.m"; sourceTree = "<group>"; };
 		1A6B8E421AC93B4C0021CDE4 /* MenuViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewControllerSpec.m; sourceTree = "<group>"; };
+		1A70CC561AD4F7B30085796C /* CommentViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewControllerSpec.m; sourceTree = "<group>"; };
+		1A70CC581AD4FC4B0085796C /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		1A70CC591AD4FC4B0085796C /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		1A70CC5B1AD5096B0085796C /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		1A70CC5C1AD5096B0085796C /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		1A74A5B61AD4D48600D0815B /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
 		1A74A5B71AD4D48600D0815B /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 		1A74A5B91AD4D56500D0815B /* CommentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewModel.h; sourceTree = "<group>"; };
@@ -248,6 +256,10 @@
 				1A74A5B71AD4D48600D0815B /* CommentViewController.m */,
 				1A74A5B91AD4D56500D0815B /* CommentViewModel.h */,
 				1A74A5BA1AD4D56500D0815B /* CommentViewModel.m */,
+				1A70CC581AD4FC4B0085796C /* CommentTableViewCell.h */,
+				1A70CC591AD4FC4B0085796C /* CommentTableViewCell.m */,
+				1A70CC5B1AD5096B0085796C /* Comment.h */,
+				1A70CC5C1AD5096B0085796C /* Comment.m */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -428,6 +440,7 @@
 		1A5807DC1AC711DE006F64D0 /* Comment */ = {
 			isa = PBXGroup;
 			children = (
+				1A70CC561AD4F7B30085796C /* CommentViewControllerSpec.m */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -877,12 +890,14 @@
 				1A6B8E351AC8FF030021CDE4 /* MenuViewController.m in Sources */,
 				1AEF79C71AC31BBE002DF6D0 /* SoundPlayer.swift in Sources */,
 				1AEF79CE1AC31BBE002DF6D0 /* SpringTextView.swift in Sources */,
+				1A70CC5A1AD4FC4B0085796C /* CommentTableViewCell.m in Sources */,
 				1A3ED5101AC6B5F600F052AE /* ArrayDataSource.m in Sources */,
 				1AD915781AC3156100B6F6A2 /* AppDelegate.m in Sources */,
 				1A74A5BB1AD4D56500D0815B /* CommentViewModel.m in Sources */,
 				1AEF79C01AC31BBE002DF6D0 /* DesignableView.swift in Sources */,
 				1AEF79C91AC31BBE002DF6D0 /* SpringAnimation.swift in Sources */,
 				1AEF79C81AC31BBE002DF6D0 /* Spring.swift in Sources */,
+				1A70CC5D1AD5096B0085796C /* Comment.m in Sources */,
 				1AEF79C41AC31BBE002DF6D0 /* LoadingView.swift in Sources */,
 				1AEF79CD1AC31BBE002DF6D0 /* SpringTextField.swift in Sources */,
 				1AEF79BA1AC31BBE002DF6D0 /* DesignableButton.swift in Sources */,
@@ -925,6 +940,7 @@
 				1A5807EE1AC824CB006F64D0 /* StorySpec.m in Sources */,
 				1A9FEAB81AC9500D006EA4D4 /* UIViewController+Storyboard.m in Sources */,
 				1A3ED5171AC6B97300F052AE /* ArrayDataSourceSpec.m in Sources */,
+				1A70CC571AD4F7B30085796C /* CommentViewControllerSpec.m in Sources */,
 				1A30CF811ACAA6AB004CA714 /* LoginViewControllerSpec.m in Sources */,
 				1A6B8E431AC93B4C0021CDE4 /* MenuViewControllerSpec.m in Sources */,
 				1A5807F21AC826D3006F64D0 /* TestHelper.m in Sources */,

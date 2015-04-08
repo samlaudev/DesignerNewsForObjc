@@ -8,6 +8,7 @@
 
 #import <Mantle.h>
 #import <UIKit/UIKit.h>
+#import "Comment.h"
 
 @interface Story : MTLModel <MTLJSONSerializing>
 
@@ -20,5 +21,6 @@
 @property (assign, nonatomic) NSInteger upvoteCount;
 @property (assign, nonatomic) NSInteger commentCount;
 @property (strong, nonatomic) NSString *comment;
+@property (strong, nonatomic) NSArray *comments;
 
 @end

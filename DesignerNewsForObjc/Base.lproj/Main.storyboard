@@ -562,10 +562,10 @@
             </objects>
             <point key="canvasLocation" x="1058" y="338"/>
         </scene>
-        <!--W-->
+        <!--Comment View Controller-->
         <scene sceneID="uqn-zI-bnP">
             <objects>
-                <tableViewController id="sOK-Tx-XTI" customClass="w" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CommentViewController" id="sOK-Tx-XTI" customClass="CommentViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" id="6qg-Dl-xEd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -605,7 +605,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="fCj-jX-sJI">
                                             <rect key="frame" x="56" y="33" width="219" height="18"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
-                                            <color key="textColor" red="0.58823529409999997" green="0.65098039220000004" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.58431372549019611" green="0.65098039215686276" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smg-9B-XHD" customClass="SpringButton" customModule="DesignerNewsForObjc" customModuleProvider="target">
@@ -616,7 +616,7 @@
                                             </constraints>
                                             <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
-                                            <state key="normal" title="94" image="icon-reply">
+                                            <state key="normal" image="icon-reply">
                                                 <color key="titleColor" red="0.58823529409999997" green="0.65098039220000004" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -637,7 +637,7 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
                                             </userDefinedRuntimeAttributes>
                                         </button>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-az-j4i">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-az-j4i" customClass="AutoTextView" customModule="DesignerNewsForObjc" customModuleProvider="target">
                                             <rect key="frame" x="38" y="90" width="274" height="50"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
@@ -671,28 +671,29 @@
                                     <outlet property="authorLabel" destination="fCj-jX-sJI" id="VLI-wA-Ss6"/>
                                     <outlet property="badgeImageView" destination="XQ9-uv-SFq" id="ToA-jk-EXB"/>
                                     <outlet property="commentButton" destination="smg-9B-XHD" id="wOZ-IB-1Pj"/>
+                                    <outlet property="commentTextView" destination="lDa-az-j4i" id="idN-Zl-U5d"/>
                                     <outlet property="timeLabel" destination="s2X-al-eXd" id="DJV-Nl-QEZ"/>
                                     <outlet property="titleLabel" destination="ccT-CT-j0g" id="iHG-H6-snX"/>
                                     <outlet property="upvoteButton" destination="OW2-gB-cxV" id="fDX-wn-tcx"/>
                                     <outlet property="userAvatarImageView" destination="LE4-CI-Rum" id="H9B-5O-b7d"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="150" id="vqo-ds-qwB" customClass="StoryTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="150" id="vqo-ds-qwB" customClass="CommentTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vqo-ds-qwB" id="JQe-4R-Aw9">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RsX-X5-mdP">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RsX-X5-mdP" customClass="AsyncImageView" customModule="DesignerNewsForObjc" customModuleProvider="target">
                                             <rect key="frame" x="8" y="10" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="JTS-OC-Zlt"/>
                                                 <constraint firstAttribute="width" constant="20" id="aUt-Jc-v6P"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="gdU-eW-tYX">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="gdU-eW-tYX">
                                             <rect key="frame" x="38" y="8" width="237" height="25"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.58431372549019611" green="0.65098039215686276" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1d" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idg-qa-HWt">
@@ -701,37 +702,24 @@
                                             <color key="textColor" red="0.58823529409999997" green="0.65098039220000004" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eTL-Yx-VZg" customClass="AsyncImageView" customModule="DesignerNewsForObjc" customModuleProvider="target">
-                                            <rect key="frame" x="38" y="37" width="10" height="10"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="10" id="URV-Pk-Xa0"/>
-                                                <constraint firstAttribute="height" constant="10" id="zwf-oT-NVs"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="aYa-X9-z5c">
-                                            <rect key="frame" x="56" y="33" width="219" height="18"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
-                                            <color key="textColor" red="0.58823529409999997" green="0.65098039220000004" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pze-Yd-sav" customClass="SpringButton" customModule="DesignerNewsForObjc" customModuleProvider="target">
-                                            <rect key="frame" x="112" y="59" width="54" height="22"/>
+                                            <rect key="frame" x="112" y="43" width="54" height="22"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="54" id="30O-rm-dlC"/>
-                                                <constraint firstAttribute="height" constant="22" id="KWK-jK-Jkd"/>
+                                                <constraint firstAttribute="height" constant="22" id="xKa-OI-cuN"/>
+                                                <constraint firstAttribute="width" constant="54" id="zVx-pl-Pah"/>
                                             </constraints>
                                             <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
-                                            <state key="normal" title="94" image="icon-reply">
+                                            <state key="normal" image="icon-reply">
                                                 <color key="titleColor" red="0.58823529409999997" green="0.65098039220000004" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUO-lG-mL4" customClass="SpringButton" customModule="DesignerNewsForObjc" customModuleProvider="target">
-                                            <rect key="frame" x="38" y="59" width="54" height="22"/>
+                                            <rect key="frame" x="38" y="43" width="54" height="22"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="54" id="Swv-WM-S8v"/>
-                                                <constraint firstAttribute="height" constant="22" id="Ua7-wy-TeI"/>
+                                                <constraint firstAttribute="height" constant="22" id="jbS-1x-Qig"/>
+                                                <constraint firstAttribute="width" constant="54" id="z0H-vG-i9X"/>
                                             </constraints>
                                             <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
@@ -743,44 +731,38 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
                                             </userDefinedRuntimeAttributes>
                                         </button>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="Npc-gy-7sM">
-                                            <rect key="frame" x="38" y="90" width="274" height="50"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="Npc-gy-7sM" customClass="AutoTextView" customModule="DesignerNewsForObjc" customModuleProvider="target">
+                                            <rect key="frame" x="38" y="75" width="274" height="65"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Npc-gy-7sM" secondAttribute="bottom" constant="2" id="1FD-9a-J5w"/>
+                                        <constraint firstItem="Npc-gy-7sM" firstAttribute="trailing" secondItem="JQe-4R-Aw9" secondAttribute="trailingMargin" id="13Z-vK-HV1"/>
                                         <constraint firstAttribute="trailing" secondItem="gdU-eW-tYX" secondAttribute="trailing" constant="45" id="1Ru-uy-adA"/>
-                                        <constraint firstItem="pUO-lG-mL4" firstAttribute="top" secondItem="eTL-Yx-VZg" secondAttribute="bottom" constant="12" id="6au-UM-rpB"/>
-                                        <constraint firstItem="Npc-gy-7sM" firstAttribute="leading" secondItem="pUO-lG-mL4" secondAttribute="leading" id="6uW-if-rL1"/>
-                                        <constraint firstItem="aYa-X9-z5c" firstAttribute="leading" secondItem="eTL-Yx-VZg" secondAttribute="trailing" constant="8" id="75J-Ku-zwf"/>
-                                        <constraint firstItem="Pze-Yd-sav" firstAttribute="top" secondItem="eTL-Yx-VZg" secondAttribute="bottom" constant="12" id="Gpu-Ke-JmF"/>
-                                        <constraint firstItem="eTL-Yx-VZg" firstAttribute="top" secondItem="gdU-eW-tYX" secondAttribute="bottom" constant="4" id="HGB-RZ-0mN"/>
-                                        <constraint firstItem="Npc-gy-7sM" firstAttribute="top" secondItem="pUO-lG-mL4" secondAttribute="bottom" constant="9" id="KRw-MH-rED"/>
-                                        <constraint firstAttribute="trailing" secondItem="aYa-X9-z5c" secondAttribute="trailing" constant="45" id="QVv-kF-Ok8"/>
+                                        <constraint firstItem="gdU-eW-tYX" firstAttribute="leading" secondItem="pUO-lG-mL4" secondAttribute="leading" id="66e-QA-aph"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Npc-gy-7sM" secondAttribute="bottom" constant="2" id="DJj-Ve-Zwv"/>
+                                        <constraint firstItem="Npc-gy-7sM" firstAttribute="leading" secondItem="pUO-lG-mL4" secondAttribute="leading" id="QlK-K3-6P9"/>
                                         <constraint firstItem="gdU-eW-tYX" firstAttribute="leading" secondItem="RsX-X5-mdP" secondAttribute="trailing" constant="10" id="Ts8-r5-96t"/>
-                                        <constraint firstItem="aYa-X9-z5c" firstAttribute="top" secondItem="gdU-eW-tYX" secondAttribute="bottom" id="Z9a-4T-vAW"/>
-                                        <constraint firstItem="pUO-lG-mL4" firstAttribute="leading" secondItem="eTL-Yx-VZg" secondAttribute="leading" id="dTL-ze-evW"/>
-                                        <constraint firstItem="eTL-Yx-VZg" firstAttribute="leading" secondItem="gdU-eW-tYX" secondAttribute="leading" id="eho-v2-Jt8"/>
+                                        <constraint firstItem="Pze-Yd-sav" firstAttribute="top" secondItem="gdU-eW-tYX" secondAttribute="bottom" constant="10" id="YZv-2j-CbE"/>
+                                        <constraint firstItem="pUO-lG-mL4" firstAttribute="top" secondItem="gdU-eW-tYX" secondAttribute="bottom" constant="10" id="k4a-Nd-Gdo"/>
+                                        <constraint firstItem="Pze-Yd-sav" firstAttribute="leading" secondItem="pUO-lG-mL4" secondAttribute="trailing" constant="20" id="llh-n5-ksL"/>
                                         <constraint firstItem="gdU-eW-tYX" firstAttribute="top" secondItem="JQe-4R-Aw9" secondAttribute="top" constant="8" id="ntK-T2-luh"/>
+                                        <constraint firstItem="Npc-gy-7sM" firstAttribute="top" secondItem="pUO-lG-mL4" secondAttribute="bottom" constant="10" id="oWv-BL-Dzv"/>
                                         <constraint firstItem="RsX-X5-mdP" firstAttribute="top" secondItem="JQe-4R-Aw9" secondAttribute="top" constant="10" id="qZe-6y-YRq"/>
                                         <constraint firstItem="Idg-qa-HWt" firstAttribute="top" secondItem="JQe-4R-Aw9" secondAttribute="top" constant="10" id="rUr-4I-3DN"/>
-                                        <constraint firstItem="Pze-Yd-sav" firstAttribute="leading" secondItem="pUO-lG-mL4" secondAttribute="trailing" constant="20" id="sKW-rS-G4F"/>
                                         <constraint firstItem="RsX-X5-mdP" firstAttribute="leading" secondItem="JQe-4R-Aw9" secondAttribute="leading" constant="8" id="tsu-vC-HmT"/>
-                                        <constraint firstItem="Npc-gy-7sM" firstAttribute="trailing" secondItem="JQe-4R-Aw9" secondAttribute="trailingMargin" id="wRj-cw-f7K"/>
                                         <constraint firstAttribute="trailing" secondItem="Idg-qa-HWt" secondAttribute="trailing" constant="8" id="y2M-zg-ZLp"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="authorLabel" destination="aYa-X9-z5c" id="HVY-ID-wUs"/>
-                                    <outlet property="badgeImageView" destination="RsX-X5-mdP" id="MCT-zU-zKH"/>
-                                    <outlet property="commentButton" destination="Pze-Yd-sav" id="Sag-Rn-nf1"/>
-                                    <outlet property="timeLabel" destination="Idg-qa-HWt" id="d4a-cj-iQ5"/>
-                                    <outlet property="titleLabel" destination="gdU-eW-tYX" id="bBR-qw-nc2"/>
-                                    <outlet property="upvoteButton" destination="pUO-lG-mL4" id="Fgz-3J-Cpw"/>
-                                    <outlet property="userAvatarImageView" destination="eTL-Yx-VZg" id="K3k-4s-2cd"/>
+                                    <outlet property="authorLabel" destination="gdU-eW-tYX" id="Vbh-m4-yci"/>
+                                    <outlet property="avatarImageView" destination="RsX-X5-mdP" id="wCt-0m-S3Q"/>
+                                    <outlet property="commentTextView" destination="Npc-gy-7sM" id="08K-kP-84M"/>
+                                    <outlet property="replyButton" destination="Pze-Yd-sav" id="Mt2-FK-UtT"/>
+                                    <outlet property="timeLabel" destination="Idg-qa-HWt" id="2BO-eA-1Ri"/>
+                                    <outlet property="upvoteButton" destination="pUO-lG-mL4" id="cG7-dG-IqC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

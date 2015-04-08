@@ -9,6 +9,7 @@
 #import <Kiwi/Kiwi.h>
 #import "Story.h"
 #import "TestHelper.h"
+#import "Comment.h"
 
 SPEC_BEGIN(StorySpec)
 
@@ -26,6 +27,8 @@ describe(@"Story", ^{
            [[theValue(story.storyId) should] equal:theValue(46826)];
            [[theValue(story.commentCount) should] equal:theValue(4)];
            [[theValue(story.upvoteCount) should] equal:theValue(17)];
+           Comment *comment = (Comment*)story.comments[0];
+           [[theValue(comment.commentId) should] equal:theValue(142530)];
        });
    });
 });

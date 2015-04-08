@@ -8,6 +8,24 @@
 
 #import "CommentViewModel.h"
 
+@interface CommentViewModel ()
+
+@property (strong, nonatomic) Story* story;
+
+@end
+
 @implementation CommentViewModel
+
+- (instancetype)initWithStory:(Story*)story
+{
+    self = [super init];
+    if (!self) {
+        return self;
+    }
+    
+    _story = story;
+
+    return self;
+}
 
 @end

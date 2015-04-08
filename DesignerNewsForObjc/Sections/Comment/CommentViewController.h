@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CommentViewModel.h"
+#import "Story.h"
 
 @interface CommentViewController : UITableViewController
 
 @property (strong, nonatomic, readonly) CommentViewModel *viewModel;
+
+- (void)setViewModelWithStory:(Story*)story;
 
 @end

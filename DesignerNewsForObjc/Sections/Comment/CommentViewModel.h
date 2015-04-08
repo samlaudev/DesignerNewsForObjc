@@ -7,7 +7,14 @@
 //
 
 #import "RVMViewModel.h"
+#import "ArrayDataSource.h"
+#import "Story.h"
 
 @interface CommentViewModel : RVMViewModel
+
+- (instancetype)initWithStory:(Story *)story;
+
+@property (strong, nonatomic, readonly) Story* story;
+@property (strong, nonatomic) NSArray* commentsArray;
 
 @end

@@ -23,7 +23,8 @@
         @"author" : @"user_display_name",
         @"upvoteCount" : @"vote_count",
         @"commentCount" : @"comment_count",
-        @"comment" : @"comment"
+        @"comment" : @"comment",
+        @"comments" : @"comments",
     };
 }
 
@@ -41,6 +42,11 @@
     return [MTLValueTransformer reversibleTransformerWithBlock:^id(NSString* createAt) {
         return [Misc timeAgoSinceDate:[Misc dateFromString:createAt format:@"yyyy-MM-dd'T'HH:mm:ssZ"] numericDates:YES];
     }];
+}
+
++ (NSValueTransformer *)commentsJSONTransformer
+{
+    return [MTLValueTransformer mtl_JSONArrayTransformerWithModelClass:[Comment class]];
 }
 
 @end
